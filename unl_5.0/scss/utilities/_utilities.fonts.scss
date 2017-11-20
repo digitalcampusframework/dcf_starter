@@ -1,0 +1,21 @@
+////////////////////
+// !UTILITIES: FONTS
+////////////////////
+
+
+// !Serif
+.unl-u-font-serif {
+  @include font-serif;
+}
+
+
+// !Sans Serif
+.unl-u-font-sans {
+  @include font-sans;
+}
+
+
+// !Display
+.unl-u-font-display {
+  @include font-display;
+}
