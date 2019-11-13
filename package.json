@@ -1,0 +1,27 @@
+{
+  "name": "dcf_starter",
+  "version": "1.0.0",
+  "description": "A starter theme for the Digital Campus Framework",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d-c-n/dcf_starter"
+  },
+  "keywords": [
+    "DCF",
+    "Digital Campus Framework"
+  ],
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "dcf": "git://github.com/d-c-n/dcf.git#bf0910da3466a89d9413ed8c253f929209712d82",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-noop": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "modularscale-sass": "^3.0.8"
+  },
+  "_comment": "When DCF core publishes on NPM, switch dcf dependency on Git commit"
+}
