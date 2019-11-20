@@ -16,6 +16,8 @@
     size          = require('gulp-size'),
     sass          = require('gulp-sass'),
     sassGlob      = require('gulp-sass-glob'),
+    autoprefixer  = require('autoprefixer'),
+    postcss       = require('gulp-postcss'),
     sourcemaps    = require('gulp-sourcemaps');
 
   console.log('Gulp', devBuild ? 'development' : 'production', 'build');
@@ -37,6 +39,9 @@
     src         : 'scss/{,*/}*.{scss,sass}',
     watch       : 'scss/{,*/}*.{scss,sass}',
     build       : 'css/',
+    plugins:    [
+      autoprefixer(),
+    ],
     sassOpts: {
       sourceMap       : true,
       outputStyle     : 'nested',
@@ -53,6 +58,7 @@
       .pipe(sourcemaps ? sourcemaps.init() : noop())
       .pipe(sassGlob())
       .pipe(sass(cssConfig.sassOpts).on('error', sass.logError))
+      .pipe(postcss(cssConfig.plugins))
       .pipe(sourcemaps ? sourcemaps.write('.') : noop())
       .pipe(size({ showFiles:true }))
       .pipe(gulp.dest(cssConfig.build));
