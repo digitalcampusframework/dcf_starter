@@ -17,6 +17,7 @@
     sass          = require('gulp-sass'),
     sassGlob      = require('gulp-sass-glob'),
     autoprefixer  = require('autoprefixer'),
+    cssnano       = require('cssnano'),
     postcss       = require('gulp-postcss'),
     sourcemaps    = require('gulp-sourcemaps');
 
@@ -41,6 +42,7 @@
     build       : 'css/',
     plugins:    [
       autoprefixer(),
+      cssnano()
     ],
     sassOpts: {
       sourceMap       : true,
