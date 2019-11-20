@@ -29,6 +29,7 @@
   },
   "browserslist": [
     "last 1 version",
+    "Firefox ESR",
     "> 1%",
     "maintained node versions",
     "not dead"
