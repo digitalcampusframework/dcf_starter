@@ -10,17 +10,17 @@
     devBuild  = ((process.env.NODE_ENV || 'development').trim().toLowerCase() === 'development'),
 
     // modules
-    gulp          = require('gulp'),
-    del           = require('del'),
-    noop          = require('gulp-noop'),
-    size          = require('gulp-size'),
-    sass          = require('gulp-sass'),
-    sassGlob      = require('gulp-sass-glob'),
-    autoprefixer  = require('autoprefixer'),
-    objectFitImages  = require('postcss-object-fit-images'),
-    cssnano       = require('cssnano'),
-    postcss       = require('gulp-postcss'),
-    sourcemaps    = require('gulp-sourcemaps');
+    gulp            = require('gulp'),
+    del             = require('del'),
+    noop            = require('gulp-noop'),
+    size            = require('gulp-size'),
+    sass            = require('gulp-sass'),
+    sassGlob        = require('gulp-sass-glob'),
+    autoprefixer    = require('autoprefixer'),
+    objectFitImages = require('postcss-object-fit-images'),
+    cssnano         = require('cssnano'),
+    postcss         = require('gulp-postcss'),
+    sourcemaps      = require('gulp-sourcemaps');
 
   console.log('Gulp', devBuild ? 'development' : 'production', 'build');
 
