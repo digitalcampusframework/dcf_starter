@@ -17,6 +17,7 @@
     sass          = require('gulp-sass'),
     sassGlob      = require('gulp-sass-glob'),
     autoprefixer  = require('autoprefixer'),
+    objectFitImages  = require('postcss-object-fit-images'),
     cssnano       = require('cssnano'),
     postcss       = require('gulp-postcss'),
     sourcemaps    = require('gulp-sourcemaps');
@@ -42,6 +43,7 @@
     build       : 'css/',
     plugins:    [
       autoprefixer(),
+      objectFitImages(),
       cssnano()
     ],
     sassOpts: {
