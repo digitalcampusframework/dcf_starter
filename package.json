@@ -27,11 +27,14 @@
     "postcss-object-fit-images": "^1.1.2"
   },
   "browserslist": [
-    "last 1 version",
+    "IE 11",
+    "last 1 Edge version",
+    "last 1 Firefox version",
     "Firefox ESR",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
+    "last 1 Chrome version",
+    "last 1 Safari version",
+    "iOS >= 12",
+    "Android >= 9"
   ],
   "_comment": "When DCF core publishes on NPM, switch dcf dependency on Git commit"
 }
