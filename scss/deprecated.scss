@@ -8,14 +8,14 @@
 
 
 // Mixins
-@import '../node_modules/dcf/core/dist/scss/mixins/*';
+@import '../node_modules/dcf/scss/mixins/*';
 @import 'mixins/*';
 
 
 // Functions
-@import '../node_modules/dcf/core/dist/scss/functions/*';
+@import '../node_modules/dcf/scss/functions/*';
 
 
 // Deprecated
-@import '../node_modules/dcf/core/dist/scss/deprecated/*';
+@import '../node_modules/dcf/scss/deprecated/*';
 @import '/deprecated/*';

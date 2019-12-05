@@ -8,14 +8,14 @@
 
 
 // Mixins
-@import '../node_modules/dcf/core/dist/scss/mixins/*';
+@import '../node_modules/dcf/scss/mixins/*';
 @import 'mixins/*';
 
 
 // Functions
-@import '../node_modules/dcf/core/dist/scss/functions/*';
+@import '../node_modules/dcf/scss/functions/*';
 
 
 // Mustard
-@import '../node_modules/dcf/core/dist/scss/mustard/*';
+@import '../node_modules/dcf/scss/mustard/*';
 @import '/mustard/*';
