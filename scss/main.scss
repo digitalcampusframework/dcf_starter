@@ -8,32 +8,32 @@
 
 
 // Mixins
-@import '../node_modules/dcf/core/dist/scss/mixins/*';
+@import '../node_modules/dcf/scss/mixins/*';
 @import 'mixins/*';
 
 
 // Functions
-@import '../node_modules/dcf/core/dist/scss/functions/*';
+@import '../node_modules/dcf/scss/functions/*';
 
 
 // Generic
-@import '../node_modules/dcf/core/dist/scss/generic/*';
+@import '../node_modules/dcf/scss/generic/*';
 
 
 // Elements
-@import '../node_modules/dcf/core/dist/scss/elements/*';
+@import '../node_modules/dcf/scss/elements/*';
 @import 'elements/*';
 
 
 // Objects
-@import '../node_modules/dcf/core/dist/scss/objects/*';
+@import '../node_modules/dcf/scss/objects/*';
 
 
 // Components
-@import '../node_modules/dcf/core/dist/scss/components/*';
+@import '../node_modules/dcf/scss/components/*';
 @import 'components/*';
 
 
 // Utilities
-@import '../node_modules/dcf/core/dist/scss/utilities/*';
+@import '../node_modules/dcf/scss/utilities/*';
 @import 'utilities/*';
