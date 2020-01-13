@@ -94,7 +94,6 @@
   exports.css = gulp.series(cleanCSS, css);
 
   function js() {
-    console.log('Processing DCF javascript...');
 
     if (jsConfig.compileJs) {
       let jsFiles = [];
@@ -139,20 +138,11 @@
     gulp.watch(cssConfig.watch, css);
 
     done();
-
   }
 
   /**************** default task ****************/
-  exports.default = gulp.series(exports.cleanJS, exports.js);
-  /*
-  exports.default = function(done) {
-    // Process CSS
-    gulp.series(exports.css, watch);
-
-    // Process JS
-    gulp.series(exports.cleanJS, exports.js);
-
-    done();
-  }*/
+  exports.scripts =  gulp.series(exports.cleanJS, exports.js);
+  exports.styles = gulp.series(exports.css, watch);
+  exports.default = gulp.series(gulp.parallel(exports.scripts, exports.styles));
 
 })();
