@@ -1,4 +1,6 @@
 .DS_Store
 js-compile-config.json
 /node_modules
+/js/*
+/css/*
 .idea/
