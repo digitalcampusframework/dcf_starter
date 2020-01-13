@@ -19,19 +19,30 @@
     autoprefixer    = require('autoprefixer'),
     objectFitImages = require('postcss-object-fit-images'),
     postcss         = require('gulp-postcss'),
-    sourcemaps      = require('gulp-sourcemaps');
+    sourcemaps      = require('gulp-sourcemaps'),
+    concat          = require('gulp-concat'),
+    babel = require('gulp-babel'),
+    plumber = require('gulp-plumber'),
+    uglify = require('gulp-uglify');
 
   console.log('Gulp', devBuild ? 'development' : 'production', 'build');
 
 
-  /**************** clean task ****************/
+  /**************** clean tasks ****************/
 
-  function clean() {
+  function cleanCSS() {
 
     return del([ 'css' ]);
 
   }
-  exports.clean = clean;
+  exports.cleanCSS = cleanCSS;
+
+  function cleanJS() {
+
+    return del([ 'js' ]);
+
+  }
+  exports.cleanJS = cleanJS;
 
   /**************** CSS task ****************/
 
@@ -54,6 +65,20 @@
 
   };
 
+  const jsConfig = {
+    src:                      'node_modules/dcf/js/es6/',
+    compileJs:                true,
+    includeLazyLoad:          true,
+    includeModal:             true,
+    includeUtility:           true
+  }
+
+  const jsModules = {
+    lazyLoad:           'dcf-lazyLoad.js',
+    modal:              'dcf-modal.js',
+    utility:            'dcf-utility.js'
+  }
+
   function css() {
 
     return gulp.src(cssConfig.src)
@@ -66,7 +91,45 @@
       .pipe(gulp.dest(cssConfig.build));
 
   }
-  exports.css = gulp.series(clean, css);
+  exports.css = gulp.series(cleanCSS, css);
+
+  function js() {
+    console.log('Processing DCF javascript...');
+
+    if (jsConfig.compileJs) {
+      let jsFiles = [];
+
+      if (jsConfig.includeLazyLoad) {
+        jsFiles.push(jsConfig.src + jsModules.lazyLoad);
+      }
+
+      if (jsConfig.includeModal) {
+        jsFiles.push(jsConfig.src + jsModules.modal);
+      }
+
+      if (jsConfig.includeUtility) {
+        jsFiles.push(jsConfig.src + jsModules.utility);
+      }
+
+      return gulp.src(jsFiles)
+        .pipe(plumber())
+        // Transpile the JS code using Babel's preset-env.
+        .pipe(babel({
+          presets: [
+            ['@babel/env', {
+              modules: false
+            }]
+          ],
+          plugins: [
+            '@babel/plugin-proposal-class-properties'
+          ]
+        }))
+        .pipe(concat('dcf.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('js/'));
+    }
+  }
+  exports.js = js;
 
   /**************** watch task ****************/
 
@@ -80,6 +143,16 @@
   }
 
   /**************** default task ****************/
+  exports.default = gulp.series(exports.cleanJS, exports.js);
+  /*
+  exports.default = function(done) {
+    // Process CSS
+    gulp.series(exports.css, watch);
 
-  exports.default = gulp.series(exports.css, watch);
+    // Process JS
+    gulp.series(exports.cleanJS, exports.js);
+
+    done();
+  }*/
+
 })();
