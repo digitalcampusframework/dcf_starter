@@ -66,12 +66,10 @@
   };
 
   const jsConfig = {
-    src:                      'node_modules/dcf/js/es6/',
-    compileJs:                true,
-    includeLazyLoad:          true,
-    includeModal:             true,
-    includeUtility:           true
+    src:                'node_modules/dcf/js/es6/'
   }
+
+  const jsCompileConfig = require('./js-compile-config.json');
 
   const jsModules = {
     lazyLoad:           'dcf-lazyLoad.js',
@@ -93,23 +91,19 @@
   }
   exports.css = gulp.series(cleanCSS, css);
 
-  function js() {
+  function js(done) {
 
-    if (jsConfig.compileJs) {
-      let jsFiles = [];
+    let jsFiles = [];
+    if (jsCompileConfig.compileJs) {
+      Object.keys(jsModules).forEach((module) => {
+        if (jsCompileConfig[module]) {
+          console.log('Including module ' + module + '...');
+          jsFiles.push(jsConfig.src + jsModules[module]);
+        }
+      });
+    }
 
-      if (jsConfig.includeLazyLoad) {
-        jsFiles.push(jsConfig.src + jsModules.lazyLoad);
-      }
-
-      if (jsConfig.includeModal) {
-        jsFiles.push(jsConfig.src + jsModules.modal);
-      }
-
-      if (jsConfig.includeUtility) {
-        jsFiles.push(jsConfig.src + jsModules.utility);
-      }
-
+    if (jsFiles.length) {
       return gulp.src(jsFiles)
         .pipe(plumber())
         // Transpile the JS code using Babel's preset-env.
@@ -126,6 +120,8 @@
         .pipe(concat('dcf.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('js/'));
+    } else {
+      done();
     }
   }
   exports.js = js;

@@ -1,0 +1,6 @@
+{
+  "compileJs":         true,
+  "lazyLoad":          true,
+  "modal":             true,
+  "utility":           true
+}
