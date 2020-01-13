@@ -59,6 +59,10 @@ $font-size-button: #{ms(0)}em;                                          // Label
 $font-weight-button-bold: false;                                        // Bold button text? True/false
 
 
+// Line height
+$line-height-button: #{ms(3)};                                          // Button line-height
+
+
 // Padding
 $padding-bottom-button: $length-em-2;                                   // Padding-bottom of button: .56em
 $padding-left-button: $length-em-4;                                     // Padding-left of button: 1em
