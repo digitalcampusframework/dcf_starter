@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/print.css" media="print">
   <script src="js/dcf.min.js"></script>
+  <script src="js/vendor/bodyScrollLock.min.js"></script>
+  <script src="js/vendor/ofi.min.js"></script>
 </head>
 <body>
   <header class="dcf-header" id="dcf-header">
@@ -66,7 +68,7 @@
 
   <script>
     var modals = document.querySelectorAll('.dcf-modal');
-    var modal = new DCFModal(modals);
+    var modal = new DCFModal(modals, bodyScrollLock);
     modal.initialize();
 
     const images = document.querySelectorAll('[loading=lazy], .dcf-lazy-load');

@@ -91,6 +91,20 @@
   }
   exports.css = gulp.series(cleanCSS, css);
 
+  function vendorJS(cb) {
+    // copy body-scroll-lock
+    gulp.src('node_modules/body-scroll-lock/lib/bodyScrollLock.min.js')
+      .pipe(gulp.dest('js/vendor/'));
+
+    // copy object-fit-images
+    const objectFitImagesSrc = '';
+    gulp.src('node_modules/object-fit-images/dist/ofi.min.js')
+      .pipe(gulp.dest('js/vendor/'));
+
+    cb();
+  }
+  exports.vendorJS = vendorJS;
+
   function js(done) {
 
     let jsFiles = [];
@@ -137,7 +151,7 @@
   }
 
   /**************** default task ****************/
-  exports.scripts =  gulp.series(exports.cleanJS, exports.js);
+  exports.scripts =  gulp.series(exports.cleanJS, exports.js, exports.vendorJS);
   exports.styles = gulp.series(exports.css, watch);
   exports.default = gulp.series(gulp.parallel(exports.scripts, exports.styles));
 
