@@ -109,8 +109,9 @@
 
     let jsFiles = [];
     if (jsCompileConfig.compileJs) {
+      // Always include DCFUtility since some modules are depended on
       Object.keys(jsModules).forEach((module) => {
-        if (jsCompileConfig[module]) {
+        if (jsCompileConfig[module] || module == 'utility') {
           console.log('Including module ' + module + '...');
           jsFiles.push(jsConfig.src + jsModules[module]);
         }
