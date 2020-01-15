@@ -66,16 +66,18 @@
   };
 
   const jsConfig = {
-    src:                'node_modules/dcf/js/es6/'
+    src:                'node_modules/dcf/js/',
+    minifiedFileName:   'dcf.min.js',
+    compileJs:          true
   }
 
-  const jsCompileConfig = require('./js-compile-config.json');
-
-  const jsModules = {
-    lazyLoad:           'dcf-lazyLoad.js',
-    modal:              'dcf-modal.js',
-    utility:            'dcf-utility.js'
-  }
+  // List of DCF Modules to process comment out or remove unwanted modules
+  // Values must match file names in `node_modules/dcf/js`
+  const jsModules = [
+    'dcf-lazyLoad.js',
+    'dcf-modal.js',
+    'dcf-utility.js'  // Always include due to dependency with of some modules
+  ]
 
   function css() {
 
@@ -108,13 +110,11 @@
   function js(done) {
 
     let jsFiles = [];
-    if (jsCompileConfig.compileJs) {
-      // Always include DCFUtility since some modules are depended on
-      Object.keys(jsModules).forEach((module) => {
-        if (jsCompileConfig[module] || module == 'utility') {
-          console.log('Including module ' + module + '...');
-          jsFiles.push(jsConfig.src + jsModules[module]);
-        }
+    if (jsConfig.compileJs) {
+      // Note: Always include DCFUtility since some modules are depended on
+      jsModules.forEach((module) => {
+        console.log('Including module ' + module + '...');
+        jsFiles.push(jsConfig.src + module);
       });
     }
 
@@ -132,7 +132,7 @@
             '@babel/plugin-proposal-class-properties'
           ]
         }))
-        .pipe(concat('dcf.min.js'))
+        .pipe(concat(jsConfig.minifiedFileName))
         .pipe(uglify())
         .pipe(gulp.dest('js/'));
     } else {
