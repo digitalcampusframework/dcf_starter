@@ -7,13 +7,83 @@
   <title>Digital Campus Framework &middot; Starter Theme</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/print.css" media="print">
+  <script src="js/dcf.min.js"></script>
+  <script src="js/vendor/bodyScrollLock.min.js"></script>
+  <script src="js/vendor/ofi.min.js"></script>
 </head>
 <body>
   <header class="dcf-header" id="dcf-header">
     Header markup here
   </header>
   <main class="dcf-wrapper" id="dcf-main">
-    Main markup here
+    <h1>Modal Test</h1>
+    <button class="dcf-btn dcf-btn-primary dcf-btn-toggle-modal" data-toggles-modal="test-modal-1" type="button" disabled>Toggle Modal 1</button>
+    <div class="dcf-modal" id="test-modal-1" hidden>
+      <div class="dcf-modal-wrapper" style="background-color: #fff">
+        <header class="dcf-modal-header">
+          <h2>Example Modal 1</h2>
+          <button class="dcf-btn-close-modal">Close</button>
+        </header>
+        <div class="dcf-modal-content">
+          <p>This is my modal content. <a href="#">Fusce</a> dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit <a href="#">tempus porttitor</a>. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+          <button class="dcf-btn dcf-btn-primary dcf-btn-toggle-modal" data-toggles-modal="test-modal-1" type="button" disabled>Toggle Modal 1</button>
+          <button class="dcf-btn dcf-btn-primary dcf-btn-toggle-modal" data-toggles-modal="test-modal-2" type="button" disabled>Toggle Modal 2</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="dcf-btn dcf-btn-primary dcf-btn-toggle-modal" data-toggles-modal="test-modal-2" type="button" disabled>Toggle Modal 2</button>
+    <div class="dcf-modal" id="test-modal-2" hidden>
+      <div class="dcf-modal-wrapper" style="background-color: #fff">
+        <header class="dcf-modal-header">
+          <h2>Example Modal 2</h2>
+          <button class="dcf-btn-close-modal">Close</button>
+        </header>
+        <div class="dcf-modal-content">
+          <p>This is my modal content. <a href="#">Fusce</a> dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit <a href="#">tempus porttitor</a>. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+          <button class="dcf-btn dcf-btn-primary dcf-btn-toggle-modal" data-toggles-modal="test-modal-1" type="button" disabled>Toggle Modal 1</button>
+          <button class="dcf-btn dcf-btn-primary dcf-btn-toggle-modal" data-toggles-modal="test-modal-2" type="button" disabled>Toggle Modal 2</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dcf-m-6 dcf-as-center">
+      <div class="dcf-ratio dcf-ratio-16x9 unl-frame-quad unl-bg-light-gray">
+        <img
+            loading="lazy"
+            class="dcf-ratio-child dcf-obj-fit-cover dcf-h-100% dcf-w-100% dcf-lazy-load"
+            data-sizes="(min-width: 41.956em) 43vw, 88vw"
+            data-src="../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-sm-min.jpg 284w"
+            data-srcset="../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-sm-min.jpg 284w,
+                          ../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-md-min.jpg 505w,
+                          ../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-lg-min.jpg 898w,
+                          ../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-xl-min.jpg 1596w"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAADs="
+            alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
+        <noscript>
+          <img class="dcf-ratio-child dcf-obj-fit-contain" src="../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-sm-min.jpg" alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
+        </noscript>
+      </div>
+    </div>
+
+  <script>
+    var modals = document.querySelectorAll('.dcf-modal');
+    var modal = new DCFModal(modals, bodyScrollLock);
+    modal.initialize();
+
+    const images = document.querySelectorAll('[loading=lazy], .dcf-lazy-load');
+    const observerConfig = {
+      // extend intersection root margin by 50px to start intersection earlier by 50px
+      rootMargin: '0px 0px 50px 0px',
+      threshold: [0, 0.5]
+    };
+    const enterClassNames = ['dcf-fade-in'];
+    const unlLazyLoad = new DCFLazyLoad(images, observerConfig, enterClassNames);
+    unlLazyLoad.initialize();
+
+    console.log(DCFUtility.uuidv4());
+    </script>
+
   </main>
   <footer class="dcf-footer" id="dcf-footer">
     Footer markup here
