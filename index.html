@@ -15,7 +15,44 @@
   <header class="dcf-header" id="dcf-header">
     Header markup here
   </header>
-  <main class="dcf-wrapper" id="dcf-main">
+  <main class="dcf-wrapper" id="dcf-main" tabindex="-1" role="main">
+
+    <div class="dcf-bleed dcf-wrapper dcf-pt-9 dcf-pb-9">
+      <div class="dcf-tabs">
+        <h2>Tab Group</h2>
+        <ol>
+          <li><a>Tab 1</a></li>
+          <li><a>Tab 2</a></li>
+          <li><a>Tab 3</a></li>
+        </ol>
+        <section>
+          <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
+        </section>
+        <section>
+          <p>Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+        </section>
+        <section>
+          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </section>
+      </div>
+      <div class="dcf-tabs">
+        <h2>Tab Group 2</h2>
+        <ol>
+          <li><a>Tab 4</a></li>
+          <li><a>Tab 5</a></li>
+          <li><a>Tab 6</a></li>
+        </ol>
+        <section>
+          <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
+        </section>
+        <section>
+          <p>Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+        </section>
+        <section>
+          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </section>
+      </div>
+    </div>
     <h1>Modal Test</h1>
     <button class="dcf-btn dcf-btn-primary dcf-btn-toggle-modal" data-toggles-modal="test-modal-1" type="button" disabled>Toggle Modal 1</button>
     <div class="dcf-modal" id="test-modal-1" hidden>
@@ -65,11 +102,38 @@
         </noscript>
       </div>
     </div>
+    <style>
+      .unl .dcf-tabs-list-item {
+        display: inline-block;
+      }
+      .unl .dcf-tab {
+        font-family: 'Gotham SSm A', 'Gotham SSm B';
+        font-size: .84em;
+        font-weight: bold;
+        padding: 1em 1.33em .75em;
+        text-decoration: none;
+      }
+      .unl .dcf-tab:hover {
+        text-decoration: underline;
+      }
+      .unl .dcf-tab[aria-selected] {
+        background-color: #eee;
+        color: #424240;
+      }
+      .unl .dcf-tabs-panel {
+        background-color: #eee;
+        padding: 1.78em 1.78vw;
+      }
+    </style>
 
   <script>
     var modals = document.querySelectorAll('.dcf-modal');
     var modal = new DCFModal(modals, bodyScrollLock);
     modal.initialize();
+
+    const tabGroups = document.querySelectorAll('.dcf-tabs');
+    const tabGroup = new DCFTabs(tabGroups);
+    tabGroup.initialize();
 
     const images = document.querySelectorAll('[loading=lazy], .dcf-lazy-load');
     const observerConfig = {
