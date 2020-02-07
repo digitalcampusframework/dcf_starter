@@ -76,6 +76,7 @@
   const jsModules = [
     'dcf-lazyLoad.js',
     'dcf-modal.js',
+    'dcf-tabs.js',
     'dcf-utility.js'  // Always include due to dependency with of some modules
   ]
 
