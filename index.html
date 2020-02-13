@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dcf-no-js">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -121,7 +121,11 @@
     const unlLazyLoad = new DCFLazyLoad(images, observerConfig, enterClassNames);
     unlLazyLoad.initialize();
 
-    console.log(DCFUtility.uuidv4());
+    // Trigger dcf-webp class processing
+    DCFUtility.flagSupportsWebP();
+
+    // Trigger dcf-no-js check
+    DCFUtility.flagSupportsJavaScript();
     </script>
 
   </main>
