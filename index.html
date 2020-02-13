@@ -103,6 +103,9 @@
       </div>
     </div>
   <script>
+    // Apply Foreach Polyfill
+    DCFUtility.applyNodeListForeachPolyfill();
+
     var modals = document.querySelectorAll('.dcf-modal');
     var modal = new DCFModal(modals, bodyScrollLock);
     modal.initialize();
