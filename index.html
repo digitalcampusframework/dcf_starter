@@ -7,6 +7,7 @@
   <title>Digital Campus Framework &middot; Starter Theme</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/print.css" media="print">
+  <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Element.prototype.classList%2CCustomEvent%2CNodeList.prototype.forEach%2CArray.prototype.map%2CArray.prototype.find%2Cdefault%2CArray.prototype.filter%2CElement.prototype.matches"></script>
   <script src="js/dcf.min.js"></script>
   <script src="js/vendor/bodyScrollLock.min.js"></script>
   <script src="js/vendor/ofi.min.js"></script>
@@ -90,27 +91,30 @@
             loading="lazy"
             class="dcf-ratio-child dcf-obj-fit-cover dcf-h-100% dcf-w-100% dcf-lazy-load"
             data-sizes="(min-width: 41.956em) 43vw, 88vw"
-            data-src="../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-sm-min.jpg 284w"
-            data-srcset="../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-sm-min.jpg 284w,
-                          ../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-md-min.jpg 505w,
-                          ../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-lg-min.jpg 898w,
-                          ../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-xl-min.jpg 1596w"
+            data-src="images/150815-commencement-324-sm-min.jpg 284w"
+            data-srcset="images/150815-commencement-324-sm-min.jpg 284w,
+                         images/150815-commencement-324-md-min.jpg 505w,
+                         images/150815-commencement-324-lg-min.jpg 898w,
+                         images/150815-commencement-324-xl-min.jpg 1596w"
             src="data:image/gif;base64,R0lGODlhAQABAAAAADs="
             alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
         <noscript>
-          <img class="dcf-ratio-child dcf-obj-fit-contain" src="../wdntemplates/wdn/templates_5.0/images/dev/150815-commencement-324-sm-min.jpg" alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
+          <img class="dcf-ratio-child dcf-obj-fit-contain" src="images/150815-commencement-324-sm-min.jpg" alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
         </noscript>
       </div>
     </div>
   <script>
+    // Modals Example
     var modals = document.querySelectorAll('.dcf-modal');
     var modal = new DCFModal(modals, bodyScrollLock);
     modal.initialize();
 
+    // Tabs Example
     const tabGroups = document.querySelectorAll('.dcf-tabs');
     const tabGroup = new DCFTabs(tabGroups);
     tabGroup.initialize();
 
+    // Lazy Load Example
     const images = document.querySelectorAll('[loading=lazy], .dcf-lazy-load');
     const observerConfig = {
       // extend intersection root margin by 50px to start intersection earlier by 50px
@@ -121,10 +125,10 @@
     const unlLazyLoad = new DCFLazyLoad(images, observerConfig, enterClassNames);
     unlLazyLoad.initialize();
 
-    // Trigger dcf-webp class processing
+    // WebP Support Example
     DCFUtility.flagSupportsWebP();
 
-    // Trigger dcf-no-js check
+    // JavaScript Support Example
     DCFUtility.flagSupportsJavaScript();
     </script>
 
