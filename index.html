@@ -104,6 +104,11 @@
       </div>
     </div>
   <script>
+    // Test for Object and apply if not supported
+    if(!('objectFit' in document.body.style)) {
+        objectFitImages();
+    }
+
     // Modals Example
     var modals = document.querySelectorAll('.dcf-modal');
     var modal = new DCFModal(modals, bodyScrollLock);
