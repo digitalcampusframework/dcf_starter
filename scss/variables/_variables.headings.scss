@@ -7,8 +7,9 @@
 @import '_variables.modular-scale';
 
 
-// Color
-$color-heading: $gray-darkest;                // Strive for WCAG AAA (minimum contrast ratio of 7.0) for heading text
+// Color -- strive for WCAG AAA (minimum contrast ratio of 7.0) for heading text
+$color-heading-light-mode: $gray-darkest;     // Heading color in light mode
+$color-heading-dark-mode: $gray-lightest;     // Heading color in dark mode
 
 
 // Font size

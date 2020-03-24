@@ -4,11 +4,11 @@
 
 
 // Gray
-@mixin b-color($imp:null) { border-color: $border-color $imp; }               // All sides
-@mixin bt-color($imp:null) { border-top-color: $border-color $imp; }          // Top
-@mixin br-color($imp:null) { border-right-color: $border-color $imp; }        // Right
-@mixin bb-color($imp:null) { border-bottom-color: $border-color $imp; }       // Bottom
-@mixin bl-color($imp:null) { border-left-color: $border-color $imp; }         // Left
+@mixin b-color($imp:null) { border-color: $border-color-light-mode $imp; }               // All sides
+@mixin bt-color($imp:null) { border-top-color: $border-color-light-mode $imp; }          // Top
+@mixin br-color($imp:null) { border-right-color: $border-color-light-mode $imp; }        // Right
+@mixin bb-color($imp:null) { border-bottom-color: $border-color-light-mode $imp; }       // Bottom
+@mixin bl-color($imp:null) { border-left-color: $border-color-light-mode $imp; }         // Left
 
 
 // Brand: alpha

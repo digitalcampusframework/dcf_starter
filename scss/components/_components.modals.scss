@@ -16,7 +16,7 @@
 
 // Modal header
 .theme .dcf-modal-header::after {
-  background-image: linear-gradient($bg-color-modal-header, fade-out($bg-color-modal-header, 1));
+  background-image: linear-gradient($bg-color-modal-header-light-mode, fade-out($bg-color-modal-header-light-mode, 1));
   content: '';
   @include h-4;
   left: 0;
