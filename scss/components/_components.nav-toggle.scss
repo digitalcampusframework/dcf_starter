@@ -23,7 +23,7 @@
 
   .theme .dcf-nav-toggle-group::after {
     bottom: 0;
-    box-shadow: 0 0 4px 0 fade-out($color-body, .75);
+    box-shadow: 0 0 4px 0 fade-out($color-body-light-mode, .75);
     content: '';
     height: #{ms(10)}em;
     left: 0;
