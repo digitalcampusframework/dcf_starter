@@ -17,6 +17,149 @@
     Header markup here
   </header>
   <main class="dcf-wrapper" id="dcf-main" tabindex="-1" role="main">
+    <!-- Slideshow WIP -->
+    <style>
+      .dcf-slideshow ul {
+        margin-bottom: 0;
+        padding-left: 0; /* Remove broswer default padding for list */
+      }
+      .dcf-slideshow li {
+        margin-bottom: 0;
+      }
+      .dcf-slideshow ul:first-child {
+        display: flex;
+        list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .dcf-slideshow ul:first-child li {
+        scroll-snap-align: start;
+      }
+      .dcf-slideshow ul:first-child li:not(:last-child) {
+        margin-right: .75em; /* Create variable for this */
+      }
+      /* Fallback styles */
+      .dcf-slideshow ul:first-child li {
+        flex: 0 0 84%; /* Make sure some of the next slide appears */
+      }
+      /* Styles after JavaScript loads */
+      .dcf-slideshow ul:first-child li.dcf-slide {
+        flex: 0 0 100%; /* Make each slide fill the full width of the slideshow */
+      }
+      /* Theme styles */
+      /*
+          .unl .dcf-btn-slide-caption[aria-expanded="false"] svg {
+            transform: rotate(0);
+            transition: transform .2s cubic-bezier(.17,.89,.32,1.27);
+          }
+          .unl .dcf-btn-slide-caption[aria-expanded="true"] svg {
+            transform: rotate(45deg);
+            transition: transform .2s cubic-bezier(.17,.89,.32,1.27);
+          }
+      */
+      .unl .dcf-slide-caption[aria-hidden="true"] {
+        opacity: 0;
+        pointer-events: none;
+        /*   transition: opacity $timing-fade-out $easing-fade-out; */
+        transition: all 250ms ease-out;
+      }
+      .unl .dcf-slide-caption[aria-hidden="false"] {
+        opacity: 1;
+        pointer-events: auto;
+        /*   transition: opacity $timing-fade-in $easing-fade-in; */
+        transition: opacity 250ms ease-out;
+      }
+      .unl .dcf-slide-deck {
+        --btn-b-width: 2px;
+        --btn-size-x: 2.75rem;
+        --btn-size-y: 2.25rem;
+        --clip: 3px;
+        /*   clip-path: polygon(100% 0px, 100% calc(100% - 2.25em - 7px), calc(100% - 5.125em - 13px) calc(100% - 2.25em - 7px), calc(100% - 5.125em - 13px) 100%, 0px 100%, 0px 0px); */
+        /*
+          clip-path: polygon(
+            100% 0px,
+            100% calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
+            calc(100% - (var(--btn-size-x) * 2) - (var(--btn-b-width) * 5) - var(--clip)) calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
+            calc(100% - (var(--btn-size-x) * 2) - (var(--btn-b-width) * 5) - var(--clip)) 100%,
+            -(var(--clip)) 100%,
+            0px 0px
+          );
+        */
+        clip-path: polygon(
+                100% 0px,
+                100% calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
+                calc(100% - (var(--btn-size-x) * 2) - (var(--btn-b-width) * 5) - var(--clip)) calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
+                calc(100% - (var(--btn-size-x) * 2) - (var(--btn-b-width) * 5) - var(--clip)) 100%,
+                calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip)) 100%,
+                calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip)) calc(100% + var(--clip)),
+                -3px calc(100% + var(--clip)),
+                -3px calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
+                0px calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
+                0px 0px
+        );
+      }
+      .unl .dcf-slide-figure > div,
+      .unl .dcf-slide-figure figcaption {
+        /*   clip-path: polygon(100% 0px, 100% 100%, calc(2.56em + 7px) 100%, calc(2.56em + 7px) calc(100% - 2.25em - 7px), 0px calc(100% - 2.25em - 7px), 0px calc(100% - 2.25em - 4px), calc(2.56em + 4px) calc(100% - 2.25em - 4px), calc(2.56em + 4px) 100%, 0 100%, 0px 0px); */
+        /*
+                  clip-path: polygon(
+                          100% 0px,
+                          100% 100%,
+                          calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip) - 1px) 100%,
+                          calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip) - 1px) calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip) + 1px),
+                          0px calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip) + 1px), 0px calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) + 1px),
+                          calc(var(--btn-size-x) + (var(--btn-b-width) * 2) - 1px) calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) + 1px),
+                          calc(var(--btn-size-x) + (var(--btn-b-width) * 2) - 1px) 100%,
+                          0 100%,
+                          0px 0px
+                  );
+        */
+      }
+      .unl .dcf-btn-slide-caption {
+        background-color:rgba(36,36,35,.75);
+        border-color: transparent;
+        bottom: var(--clip);
+        left: var(--clip);
+        position: absolute;
+        z-index: 1;
+      }
+      .unl .dcf-slide-caption {
+        background-color: rgba(36,36,35,.75);
+        /*   clip-path: polygon(100% 0px, 100% 100%, calc(2.56rem + 7px) 100%, calc(2.56rem + 7px) calc(100% - 2.25rem - 7px), 0px calc(100% - 2.25rem - 7px), 0px 0px); */
+        /*
+              clip-path: polygon(
+                100% 0px,
+                100% 100%,
+                calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip)) 100%,
+                calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip)) calc(100% - var(--btn-size) - (var(--btn-p-y) * 2) - (var(--btn-b-width) * 2) - var(--clip)),
+                0px calc(100% - var(--btn-size) - (var(--btn-p-y) * 2) - (var(--btn-b-width) * 2) - var(--clip)),
+                0px 0px
+              );
+        */
+        clip-path: polygon(100% 0px, 100% 100%, calc((var(--clip) * 2) + (var(--btn-b-width) * 2) + var(--btn-size-x)) 100%, calc((var(--clip) * 2) + (var(--btn-b-width) * 2) + var(--btn-size-x)) calc(100% - (var(--clip) * 2) - (var(--btn-b-width) * 2) - var(--btn-size-y)), 0px calc(100% - (var(--clip) * 2) - (var(--btn-b-width) * 2) - var(--btn-size-y)), 0px 0px);
+        color: #fefdfa;
+        height: 100%;
+        left: 0;
+        padding: 1em 1.13em;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+      .dcf-btn-slide-caption[aria-expanded="false"] .unl-icon-slide-caption-open {
+        opacity: 1;
+        transition: opacity 250ms ease-out 125ms;
+      }
+      .dcf-btn-slide-caption[aria-expanded="true"] .unl-icon-slide-caption-open {
+        opacity: 0;
+        transition: opacity 250ms ease-out;
+      }
+      /* Temp until DCF is updated */
+      .dcf-btn-group li:not(:first-child) .dcf-btn-primary {
+        margin-left: 2px;
+      }
+    </style>
 
     <div class="dcf-bleed dcf-wrapper dcf-pt-9 dcf-pb-9">
       <div class="dcf-tabs">
