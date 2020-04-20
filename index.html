@@ -47,17 +47,7 @@
       .dcf-slideshow ul:first-child li.dcf-slide {
         flex: 0 0 100%; /* Make each slide fill the full width of the slideshow */
       }
-      /* Theme styles */
-      /*
-          .unl .dcf-btn-slide-caption[aria-expanded="false"] svg {
-            transform: rotate(0);
-            transition: transform .2s cubic-bezier(.17,.89,.32,1.27);
-          }
-          .unl .dcf-btn-slide-caption[aria-expanded="true"] svg {
-            transform: rotate(45deg);
-            transition: transform .2s cubic-bezier(.17,.89,.32,1.27);
-          }
-      */
+
       .unl .dcf-slide-caption[aria-hidden="true"] {
         opacity: 0;
         pointer-events: none;
@@ -75,17 +65,7 @@
         --btn-size-x: 2.75rem;
         --btn-size-y: 2.25rem;
         --clip: 3px;
-        /*   clip-path: polygon(100% 0px, 100% calc(100% - 2.25em - 7px), calc(100% - 5.125em - 13px) calc(100% - 2.25em - 7px), calc(100% - 5.125em - 13px) 100%, 0px 100%, 0px 0px); */
-        /*
-          clip-path: polygon(
-            100% 0px,
-            100% calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
-            calc(100% - (var(--btn-size-x) * 2) - (var(--btn-b-width) * 5) - var(--clip)) calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
-            calc(100% - (var(--btn-size-x) * 2) - (var(--btn-b-width) * 5) - var(--clip)) 100%,
-            -(var(--clip)) 100%,
-            0px 0px
-          );
-        */
+
         clip-path: polygon(
                 100% 0px,
                 100% calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
@@ -101,20 +81,6 @@
       }
       .unl .dcf-slide-figure > div,
       .unl .dcf-slide-figure figcaption {
-        /*   clip-path: polygon(100% 0px, 100% 100%, calc(2.56em + 7px) 100%, calc(2.56em + 7px) calc(100% - 2.25em - 7px), 0px calc(100% - 2.25em - 7px), 0px calc(100% - 2.25em - 4px), calc(2.56em + 4px) calc(100% - 2.25em - 4px), calc(2.56em + 4px) 100%, 0 100%, 0px 0px); */
-        /*
-                  clip-path: polygon(
-                          100% 0px,
-                          100% 100%,
-                          calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip) - 1px) 100%,
-                          calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip) - 1px) calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip) + 1px),
-                          0px calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip) + 1px), 0px calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) + 1px),
-                          calc(var(--btn-size-x) + (var(--btn-b-width) * 2) - 1px) calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) + 1px),
-                          calc(var(--btn-size-x) + (var(--btn-b-width) * 2) - 1px) 100%,
-                          0 100%,
-                          0px 0px
-                  );
-        */
       }
       .unl .dcf-btn-slide-caption {
         background-color:rgba(36,36,35,.75);
@@ -126,17 +92,6 @@
       }
       .unl .dcf-slide-caption {
         background-color: rgba(36,36,35,.75);
-        /*   clip-path: polygon(100% 0px, 100% 100%, calc(2.56rem + 7px) 100%, calc(2.56rem + 7px) calc(100% - 2.25rem - 7px), 0px calc(100% - 2.25rem - 7px), 0px 0px); */
-        /*
-              clip-path: polygon(
-                100% 0px,
-                100% 100%,
-                calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip)) 100%,
-                calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip)) calc(100% - var(--btn-size) - (var(--btn-p-y) * 2) - (var(--btn-b-width) * 2) - var(--clip)),
-                0px calc(100% - var(--btn-size) - (var(--btn-p-y) * 2) - (var(--btn-b-width) * 2) - var(--clip)),
-                0px 0px
-              );
-        */
         clip-path: polygon(100% 0px, 100% 100%, calc((var(--clip) * 2) + (var(--btn-b-width) * 2) + var(--btn-size-x)) 100%, calc((var(--clip) * 2) + (var(--btn-b-width) * 2) + var(--btn-size-x)) calc(100% - (var(--clip) * 2) - (var(--btn-b-width) * 2) - var(--btn-size-y)), 0px calc(100% - (var(--clip) * 2) - (var(--btn-b-width) * 2) - var(--btn-size-y)), 0px 0px);
         color: #fefdfa;
         height: 100%;
@@ -147,11 +102,11 @@
         width: 100%;
         z-index: 1;
       }
-      .dcf-btn-slide-caption[aria-expanded="false"] .unl-icon-slide-caption-open {
+      .dcf-btn-slide-caption[aria-expanded="false"] .example-icon-slide-caption-open {
         opacity: 1;
         transition: opacity 250ms ease-out 125ms;
       }
-      .dcf-btn-slide-caption[aria-expanded="true"] .unl-icon-slide-caption-open {
+      .dcf-btn-slide-caption[aria-expanded="true"] .example-icon-slide-caption-open {
         opacity: 0;
         transition: opacity 250ms ease-out;
       }
@@ -414,7 +369,7 @@
       Array.prototype.forEach.call(ctrls, (ctrl) => {
         if (ctrl.getAttribute('id') === 'previous') {
           let ctrlButton = ctrl.querySelector('button');
-          ctrlButton.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'unl-cream');
+          ctrlButton.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'dcf-inverse');
           ctrlButton.innerHTML =
                   '<svg class="dcf-h-4 dcf-w-4 dcf-fill-current" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">' +
                   '<path d="M21.746.064a.504.504 0 0 0-.504.008l-19 11.5a.499.499 0 0 0-.001.856l19' +
@@ -422,7 +377,7 @@
                   '</svg>';
         } else if (ctrl.getAttribute('id') === 'next') {
           let ctrlButton = ctrl.querySelector('button');
-          ctrlButton.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'unl-cream');
+          ctrlButton.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'dcf-inverse');
           ctrlButton.innerHTML =
                   '<svg class="dcf-h-4 dcf-w-4 dcf-fill-current" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">' +
                   '<path d="M21.759 11.577L2.786.077a.499.499 0 0 0-.759.428v23a.498.498 ' +
@@ -437,17 +392,17 @@
         if (!(typeof captionBtn === 'undefined')) {
           captionBtn.innerHTML = '<svg class="dcf-h-4 dcf-w-4 dcf-fill-current" ' +
                   'width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">' +
-                  '<path class="unl-icon-slide-caption-open" ' +
+                  '<path class="example-icon-slide-caption-open" ' +
                   'd="M1,3h19c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1C0.4,1,0,1.4,0,2C0,2.6,0.4,3,1,3z"/>' +
-                  '<path class="unl-icon-slide-caption-open" ' +
+                  '<path class="example-icon-slide-caption-open" ' +
                   'd="M1,8h15c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1C0.4,6,0,6.4,0,7C0,7.6,0.4,8,1,8z"/>' +
-                  '<path class="unl-icon-slide-caption-close-1" ' +
+                  '<path class="example-icon-slide-caption-close-1" ' +
                   'd="M1,13h22c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,12.6,0.4,13,1,13z"/>' +
-                  '<path class="unl-icon-slide-caption-close-2" ' +
+                  '<path class="example-icon-slide-caption-close-2" ' +
                   'd="M1,13h22c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,12.6,0.4,13,1,13z"/>' +
-                  '<path class="unl-icon-slide-caption-open" ' +
+                  '<path class="example-icon-slide-caption-open" ' +
                   'd="M1,18h18c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,17.6,0.4,18,1,18z"/>' +
-                  '<path class="unl-icon-slide-caption-open" ' +
+                  '<path class="example-icon-slide-caption-open" ' +
                   'd="M1,23h15c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,22.6,0.4,23,1,23z"/>' +
                   '</svg>';
         }
@@ -455,13 +410,13 @@
     });
     let slideBtns = document.querySelectorAll('.dcf-btn-slide');
     Array.prototype.forEach.call(slideBtns, (slideBtn) => {
-      slideBtn.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'unl-cream');
+      slideBtn.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'dcf-white'); // Changing unl-cream to dcf-inverse doesn't show the button icon
     });
     let buttons = document.querySelectorAll('.dcf-btn-slide-caption');
     Array.prototype.forEach.call(buttons, (button) => {
       let caption = button.previousElementSibling;
-      let close1 = button.querySelector('.unl-icon-slide-caption-close-1');
-      let close2 = button.querySelector('.unl-icon-slide-caption-close-2');
+      let close1 = button.querySelector('.example-icon-slide-caption-close-1');
+      let close2 = button.querySelector('.example-icon-slide-caption-close-2');
 
       caption.addEventListener('openCaption', () => {
         close1.animate(keyframesClose1, options);
