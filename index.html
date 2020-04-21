@@ -48,19 +48,19 @@
         flex: 0 0 100%; /* Make each slide fill the full width of the slideshow */
       }
 
-      .unl .dcf-slide-caption[aria-hidden="true"] {
+      .theme .dcf-slide-caption[aria-hidden="true"] {
         opacity: 0;
         pointer-events: none;
         /*   transition: opacity $timing-fade-out $easing-fade-out; */
         transition: all 250ms ease-out;
       }
-      .unl .dcf-slide-caption[aria-hidden="false"] {
+      .theme .dcf-slide-caption[aria-hidden="false"] {
         opacity: 1;
         pointer-events: auto;
         /*   transition: opacity $timing-fade-in $easing-fade-in; */
         transition: opacity 250ms ease-out;
       }
-      .unl .dcf-slide-deck {
+      .theme .dcf-slide-deck {
         --btn-b-width: 2px;
         --btn-size-x: 2.75rem;
         --btn-size-y: 2.25rem;
@@ -79,10 +79,10 @@
                 0px 0px
         );
       }
-      .unl .dcf-slide-figure > div,
-      .unl .dcf-slide-figure figcaption {
+      .theme .dcf-slide-figure > div,
+      .theme .dcf-slide-figure figcaption {
       }
-      .unl .dcf-btn-slide-caption {
+      .theme .dcf-btn-slide-caption {
         background-color:rgba(36,36,35,.75);
         border-color: transparent;
         bottom: var(--clip);
@@ -90,7 +90,7 @@
         position: absolute;
         z-index: 1;
       }
-      .unl .dcf-slide-caption {
+      .theme .dcf-slide-caption {
         background-color: rgba(36,36,35,.75);
         clip-path: polygon(100% 0px, 100% 100%, calc((var(--clip) * 2) + (var(--btn-b-width) * 2) + var(--btn-size-x)) 100%, calc((var(--clip) * 2) + (var(--btn-b-width) * 2) + var(--btn-size-x)) calc(100% - (var(--clip) * 2) - (var(--btn-b-width) * 2) - var(--btn-size-y)), 0px calc(100% - (var(--clip) * 2) - (var(--btn-b-width) * 2) - var(--btn-size-y)), 0px 0px);
         color: #fefdfa;
