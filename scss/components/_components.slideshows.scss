@@ -1,0 +1,52 @@
+//////////////////////////////////
+// THEME / COMPONENTS / SLIDESHOWS
+//////////////////////////////////
+
+
+.theme .dcf-slide-caption[aria-hidden="true"] {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $timing-fade-out $easing-fade-out;
+}
+
+
+.theme .dcf-slide-caption[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity $timing-fade-in $easing-fade-in;
+}
+
+
+.theme .dcf-btn-slide-caption {
+  @include $bg-color-overlay-dark;
+  border-color: transparent;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+w
+.theme .dcf-slide-caption {
+  @include $bg-color-overlay-dark;
+  color: $white;
+  height: 100%;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.dcf-btn-slide-caption[aria-expanded="false"] .theme-icon-slide-caption-open {
+  opacity: 1;
+  transition: opacity 250ms ease-out 125ms;
+}
+
+
+.dcf-btn-slide-caption[aria-expanded="true"] .theme-icon-slide-caption-open {
+  opacity: 0;
+  transition: opacity 250ms ease-out;
+}
