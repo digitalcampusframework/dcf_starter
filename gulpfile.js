@@ -77,6 +77,7 @@
     'dcf-lazyLoad.js',
     'dcf-modal.js',
     'dcf-tabs.js',
+    'dcf-slideshow.js',
     'dcf-utility.js'  // Always include due to dependency with of some modules
   ]
 
