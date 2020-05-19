@@ -18,7 +18,7 @@
 
 
 .theme .dcf-btn-slide-caption {
-  @include bg-color-overlay-dark;
+  @include bg-overlay-dark;
   border-color: transparent;
   bottom: 0;
   left: 0;
@@ -26,9 +26,9 @@
   z-index: 1;
 }
 
-w
+
 .theme .dcf-slide-caption {
-  @include bg-color-overlay-dark;
+  @include bg-overlay-dark;
   color: $white;
   height: 100%;
   left: 0;
