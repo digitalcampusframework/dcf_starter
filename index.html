@@ -12,110 +12,12 @@
   <script src="js/vendor/bodyScrollLock.min.js"></script>
   <script src="js/vendor/ofi.min.js"></script>
 </head>
-<body>
+<body class="theme">
   <header class="dcf-header" id="dcf-header">
     Header markup here
   </header>
   <main class="dcf-wrapper" id="dcf-main" tabindex="-1" role="main">
     <!-- Slideshow WIP -->
-    <style>
-      .dcf-slideshow ul {
-        margin-bottom: 0;
-        padding-left: 0; /* Remove broswer default padding for list */
-      }
-      .dcf-slideshow li {
-        margin-bottom: 0;
-      }
-      .dcf-slideshow ul:first-child {
-        display: flex;
-        list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-      }
-      .dcf-slideshow ul:first-child li {
-        scroll-snap-align: start;
-      }
-      .dcf-slideshow ul:first-child li:not(:last-child) {
-        margin-right: .75em; /* Create variable for this */
-      }
-      /* Fallback styles */
-      .dcf-slideshow ul:first-child li {
-        flex: 0 0 84%; /* Make sure some of the next slide appears */
-      }
-      /* Styles after JavaScript loads */
-      .dcf-slideshow ul:first-child li.dcf-slide {
-        flex: 0 0 100%; /* Make each slide fill the full width of the slideshow */
-      }
-
-      .theme .dcf-slide-caption[aria-hidden="true"] {
-        opacity: 0;
-        pointer-events: none;
-        /*   transition: opacity $timing-fade-out $easing-fade-out; */
-        transition: all 250ms ease-out;
-      }
-      .theme .dcf-slide-caption[aria-hidden="false"] {
-        opacity: 1;
-        pointer-events: auto;
-        /*   transition: opacity $timing-fade-in $easing-fade-in; */
-        transition: opacity 250ms ease-out;
-      }
-      .theme .dcf-slide-deck {
-        --btn-b-width: 2px;
-        --btn-size-x: 2.75rem;
-        --btn-size-y: 2.25rem;
-        --clip: 3px;
-
-        clip-path: polygon(
-                100% 0px,
-                100% calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
-                calc(100% - (var(--btn-size-x) * 2) - (var(--btn-b-width) * 5) - var(--clip)) calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
-                calc(100% - (var(--btn-size-x) * 2) - (var(--btn-b-width) * 5) - var(--clip)) 100%,
-                calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip)) 100%,
-                calc(var(--btn-size-x) + (var(--btn-b-width) * 2) + var(--clip)) calc(100% + var(--clip)),
-                -3px calc(100% + var(--clip)),
-                -3px calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
-                0px calc(100% - var(--btn-size-y) - (var(--btn-b-width) * 2) - var(--clip)),
-                0px 0px
-        );
-      }
-      .theme .dcf-slide-figure > div,
-      .theme .dcf-slide-figure figcaption {
-      }
-      .theme .dcf-btn-slide-caption {
-        background-color:rgba(36,36,35,.75);
-        border-color: transparent;
-        bottom: var(--clip);
-        left: var(--clip);
-        position: absolute;
-        z-index: 1;
-      }
-      .theme .dcf-slide-caption {
-        background-color: rgba(36,36,35,.75);
-        clip-path: polygon(100% 0px, 100% 100%, calc((var(--clip) * 2) + (var(--btn-b-width) * 2) + var(--btn-size-x)) 100%, calc((var(--clip) * 2) + (var(--btn-b-width) * 2) + var(--btn-size-x)) calc(100% - (var(--clip) * 2) - (var(--btn-b-width) * 2) - var(--btn-size-y)), 0px calc(100% - (var(--clip) * 2) - (var(--btn-b-width) * 2) - var(--btn-size-y)), 0px 0px);
-        color: #fefdfa;
-        height: 100%;
-        left: 0;
-        padding: 1em 1.13em;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1;
-      }
-      .dcf-btn-slide-caption[aria-expanded="false"] .example-icon-slide-caption-open {
-        opacity: 1;
-        transition: opacity 250ms ease-out 125ms;
-      }
-      .dcf-btn-slide-caption[aria-expanded="true"] .example-icon-slide-caption-open {
-        opacity: 0;
-        transition: opacity 250ms ease-out;
-      }
-      /* Temp until DCF is updated */
-      .dcf-btn-group li:not(:first-child) .dcf-btn-primary {
-        margin-left: 2px;
-      }
-    </style>
-
     <div class="dcf-bleed dcf-wrapper dcf-pt-9 dcf-pb-9">
       <div class="dcf-tabs">
         <h2>Tab Group</h2>
@@ -392,17 +294,17 @@
         if (!(typeof captionBtn === 'undefined')) {
           captionBtn.innerHTML = '<svg class="dcf-h-4 dcf-w-4 dcf-fill-current" ' +
                   'width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">' +
-                  '<path class="example-icon-slide-caption-open" ' +
+                  '<path class="theme-icon-slide-caption-open" ' +
                   'd="M1,3h19c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1C0.4,1,0,1.4,0,2C0,2.6,0.4,3,1,3z"/>' +
-                  '<path class="example-icon-slide-caption-open" ' +
+                  '<path class="theme-icon-slide-caption-open" ' +
                   'd="M1,8h15c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1C0.4,6,0,6.4,0,7C0,7.6,0.4,8,1,8z"/>' +
-                  '<path class="example-icon-slide-caption-close-1" ' +
+                  '<path class="theme-icon-slide-caption-close-1" ' +
                   'd="M1,13h22c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,12.6,0.4,13,1,13z"/>' +
-                  '<path class="example-icon-slide-caption-close-2" ' +
+                  '<path class="theme-icon-slide-caption-close-2" ' +
                   'd="M1,13h22c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,12.6,0.4,13,1,13z"/>' +
-                  '<path class="example-icon-slide-caption-open" ' +
+                  '<path class="theme-icon-slide-caption-open" ' +
                   'd="M1,18h18c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,17.6,0.4,18,1,18z"/>' +
-                  '<path class="example-icon-slide-caption-open" ' +
+                  '<path class="theme-icon-slide-caption-open" ' +
                   'd="M1,23h15c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,22.6,0.4,23,1,23z"/>' +
                   '</svg>';
         }
@@ -410,13 +312,13 @@
     });
     let slideBtns = document.querySelectorAll('.dcf-btn-slide');
     Array.prototype.forEach.call(slideBtns, (slideBtn) => {
-      slideBtn.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'dcf-white'); // Changing unl-cream to dcf-inverse doesn't show the button icon
+      slideBtn.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'dcf-white');
     });
     let buttons = document.querySelectorAll('.dcf-btn-slide-caption');
     Array.prototype.forEach.call(buttons, (button) => {
       let caption = button.previousElementSibling;
-      let close1 = button.querySelector('.example-icon-slide-caption-close-1');
-      let close2 = button.querySelector('.example-icon-slide-caption-close-2');
+      let close1 = button.querySelector('.theme-icon-slide-caption-close-1');
+      let close2 = button.querySelector('.theme-icon-slide-caption-close-2');
 
       caption.addEventListener('openCaption', () => {
         close1.animate(keyframesClose1, options);
