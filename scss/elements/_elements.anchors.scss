@@ -5,11 +5,11 @@
 
 // Link
 .theme a:link {
-  transition: color $hover-off;
+  transition: color $transition-duration-hover-off $transition-timing-fn-hover-off;
 }
 
 
 // Hover
 .theme a:hover {
-  transition: color $hover-on;
+  transition: color $transition-duration-hover-on $transition-timing-fn-hover-on;
 }
