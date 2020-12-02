@@ -5,12 +5,12 @@
 
 
 .theme .dcf-btn {
-  transition: all $hover-off;
+  transition: all $transition-duration-hover-off $transition-timing-fn-hover-off;
 }
 
 
 .theme .dcf-btn:hover {
-  transition: all $hover-on;
+  transition: all $transition-duration-hover-on $transition-timing-fn-hover-on;
 }
 
 
