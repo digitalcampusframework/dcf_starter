@@ -187,7 +187,26 @@
         </noscript>
       </div>
     </div>
-  <script>
+
+    <div class="dcf-overflow-x-auto">
+      <table class="dcf-table dcf-table-bordered dcf-table-striped dcf-w-100%">
+        <caption>Scrollable Table</caption>
+        <thead>
+        <tr>
+          <th data-label="foo" scope="col">Lorem ipsum dolor</th>
+          <th data-label="bar" scope="col">Lorem ipsum dolor sit</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td data-label="foo" scope="row">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget.</td>
+          <td data-label="bar">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus.</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
     // Test for Object and apply if not supported
     if(!('objectFit' in document.body.style)) {
         objectFitImages();
@@ -202,6 +221,11 @@
     const tabGroups = document.querySelectorAll('.dcf-tabs');
     const tabGroup = new DCFTabs(tabGroups);
     tabGroup.initialize();
+
+    // Table Example
+    const tables = document.querySelectorAll('.dcf-table');
+    const table = new DCFTable(tables);
+    table.initialize();
 
     // Slideshow Example
     const slideshows = document.querySelectorAll('.dcf-slideshow');
