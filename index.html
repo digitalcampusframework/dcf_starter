@@ -59,7 +59,7 @@
     <div class="dcf-bleed dcf-wrapper dcf-pt-3 dcf-pb-6 unl-bg-lightest-gray">
       <div class="dcf-grid dcf-mb-6">
         <div class="dcf-col-100% dcf-col-33%-start@sm dcf-col-50%-start@lg">
-          <div class="dcf-slideshow dcf-slideshow-nojs" role="region" aria-label="slideshow foo" data-shuffle="true" data-play="true" data-transition="fade" data-rate="2000">
+          <div class="dcf-slideshow dcf-slideshow-nojs" role="region" aria-label="slideshow foo" data-shuffle="true" data-play="auto" data-transition="fade" data-rate="2000">
             <ul>
               <!-- Slide 1 -->
               <li>
@@ -330,6 +330,43 @@
       }, false);
     };
     slideshowTheme.setThemeVariable('figureCaptionToggleTransition', figureCaptionToggleTransition);
+
+    const slideToggleTransitionDuration = 1000;
+    slideshowTheme.setThemeVariable('slideToggleTransitionDuration', slideToggleTransitionDuration);
+
+    const slideToggleTransition = (slide) => {
+      const keyframesShowSlide = [
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1
+        }
+      ];
+
+      const keyframesHideSlide = [
+        {
+          opacity: 1
+        },
+        {
+          opacity: 0
+        }
+      ];
+
+      const options = {
+        duration: slideToggleTransitionDuration,
+        fill: 'forwards'
+      };
+
+      slide.addEventListener('showSlide', () => {
+        slide.animate(keyframesShowSlide, options);
+      }, false);
+
+      slide.addEventListener('hideSlide', () => {
+        slide.animate(keyframesHideSlide, options);
+      }, false);
+    };
+    slideshowTheme.setThemeVariable('slideToggleTransition', slideToggleTransition);
 
     const slideshow = new DCFSlideshow(slideshows, slideshowTheme);
     slideshow.initialize();
