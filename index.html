@@ -192,6 +192,20 @@
       </table>
     </div>
 
+    <div id="datepicker-example1" class="dcf-mt-6 dcf-mb-6">
+      <form class="dcf-form">
+        <div class="dcf-datepicker">
+          <label for="sample-date1">Date 1</label>
+          <input id="sample-date1" type="text" name="sample_date1">
+        </div>
+
+        <div class="dcf-datepicker">
+          <label for="sample-date2">Date 2</label>
+          <input id="sample-date2" type="text" name="sample_date2">
+        </div>
+      </form>
+    </div>
+
     <script>
     // Test for Object and apply if not supported
     if(!('objectFit' in document.body.style)) {
@@ -354,6 +368,13 @@
         close2.animate(keyframesOpen2, options);
       }, false);
     });
+
+    //Date Picker
+    var datePickers = document.querySelectorAll('.dcf-datepicker');
+    datePickers.forEach(function (dp) {
+      new DCFDatepicker(dp);
+    });
+
   </script>
 
   </main>
