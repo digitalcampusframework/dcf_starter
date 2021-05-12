@@ -74,6 +74,7 @@
   // List of DCF Modules to process comment out or remove unwanted modules
   // Values must match file names in `node_modules/dcf/js`
   const jsModules = [
+    'dcf-cardAsLink.js',
     'dcf-datepicker.js',
     'dcf-lazyLoad.js',
     'dcf-modal.js',
