@@ -17,7 +17,7 @@
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/preset-env": "^7.14.5",
     "browserslist": "^4.16.6",
-    "dcf": "git://github.com/d-c-n/dcf.git#2.0",
+    "dcf": "git://github.com/jsturek/dcf.git#refactor-tabs",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
