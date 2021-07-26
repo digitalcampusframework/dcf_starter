@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" class="dcf-no-js dcf-no-webp">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Digital Campus Framework &middot; Starter Theme</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/print.css" media="print">
-  <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Element.prototype.classList%2CCustomEvent%2CNodeList.prototype.forEach%2CArray.prototype.map%2CArray.prototype.find%2Cdefault%2CArray.prototype.filter%2CElement.prototype.matches"></script>
-  <script src="js/dcf.min.js"></script>
-  <script src="js/vendor/bodyScrollLock.min.js"></script>
-  <script src="js/vendor/ofi.min.js"></script>
-</head>
-<body class="theme">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Digital Campus Framework &middot; Starter Theme</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Element.prototype.classList%2CCustomEvent%2CNodeList.prototype.forEach%2CArray.prototype.map%2CArray.prototype.find%2Cdefault%2CArray.prototype.filter%2CElement.prototype.matches"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js"></script>
+    <script src="js/vendor/bodyScrollLock.min.js"></script>
+    <script src="js/vendor/require.js"></script>
+    <script src="js/vendor/ofi.min.js"></script>
+  </head>
+  <body class="theme">
   <header class="dcf-header" id="dcf-header">
     Header markup here
   </header>
   <main class="dcf-wrapper" id="dcf-main" tabindex="-1" role="main">
     <!-- Slideshow WIP -->
     <div class="dcf-bleed dcf-wrapper dcf-pt-9 dcf-pb-9">
-      <div class="dcf-tabs">
+      <div class="dcf-tabs" id="tab-group-1">
         <h2>Tab Group</h2>
         <ol>
-          <li><a href="#tab1">Tab 1</a></li>
-          <li><a href="#tab2">Tab 2</a></li>
-          <li><a href="#tab3">Tab 3</a></li>
+          <li><a href="#tab1" id="tab-group-1-tab-1">Tab 1</a></li>
+          <li><a href="#tab2" id="tab-group-1-tab-2">Tab 2</a></li>
+          <li><a href="#tab3" id="tab-group-1-tab-3">Tab 3</a></li>
         </ol>
-        <section id="tab1">
-          <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
+        <section id="tab3">
+          <p>Tab 3: Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
         </section>
         <section id="tab2">
-          <p>Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+          <p>Tab 2: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+          <div class="dcf-tabs">
+            <h2>Tab2 SubGroup</h2>
+            <ol>
+              <li><a href="#tab2a">Tab 2a</a></li>
+              <li><a href="#tab2b">Tab 2b</a></li>
+              <li><a href="#tab2c">Tab 2c</a></li>
+            </ol>
+            <section id="tab2a">
+              <p>Tab 2a: Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
+            </section>
+            <section id="tab2b">
+              <p>Tab 2b: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+            </section>
+            <section id="tab2c">
+              <p>Tab 2c: Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </section>
+          </div>
         </section>
-        <section id="tab3">
-          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <section id="tab1">
+          <p>Tab 1: Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
         </section>
       </div>
       <div class="dcf-tabs">
@@ -44,13 +62,13 @@
           <li><a href="#tab6">Tab 6</a></li>
         </ol>
         <section id="tab4">
-          <p>Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
+          <p>Tab 4: Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
         </section>
         <section id="tab5">
-          <p>Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+          <p>Tab 5: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
         </section>
         <section id="tab6">
-          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          <p>Tab 6: Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
         </section>
       </div>
     </div>
@@ -158,16 +176,16 @@
     <div class="dcf-m-6 dcf-as-center">
       <div class="dcf-ratio dcf-ratio-16x9 unl-frame-quad unl-bg-light-gray">
         <img
-            loading="lazy"
-            class="dcf-ratio-child dcf-obj-fit-cover dcf-h-100% dcf-w-100% dcf-lazy-load"
-            data-sizes="(min-width: 41.956em) 43vw, 88vw"
-            data-src="images/150815-commencement-324-sm-min.jpg"
-            data-srcset="images/150815-commencement-324-sm-min.jpg 284w,
-                         images/150815-commencement-324-md-min.jpg 505w,
-                         images/150815-commencement-324-lg-min.jpg 898w,
-                         images/150815-commencement-324-xl-min.jpg 1596w"
-            src="data:image/gif;base64,R0lGODlhAQABAAAAADs="
-            alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
+                loading="lazy"
+                class="dcf-ratio-child dcf-obj-fit-cover dcf-h-100% dcf-w-100% dcf-lazy-load"
+                data-sizes="(min-width: 41.956em) 43vw, 88vw"
+                data-src="images/150815-commencement-324-sm-min.jpg"
+                data-srcset="images/150815-commencement-324-sm-min.jpg 284w,
+                           images/150815-commencement-324-md-min.jpg 505w,
+                           images/150815-commencement-324-lg-min.jpg 898w,
+                           images/150815-commencement-324-xl-min.jpg 1596w"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAADs="
+                alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
         <noscript>
           <img class="dcf-ratio-child dcf-obj-fit-contain" src="images/150815-commencement-324-sm-min.jpg" alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
         </noscript>
@@ -227,192 +245,17 @@
                   class="dcf-ratio-child dcf-obj-fit-cover dcf-h-100% dcf-w-100%"
                   sizes="(min-width: 41.956em) 43vw, 88vw"
                   srcset="images/150821-tunnel-325-sm-min.jpg 284w,
-                images/150821-tunnel-325-md-min.jpg 505w,
-                images/150821-tunnel-325-lg-min.jpg 898w,
-                images/150821-tunnel-325-xl-min.jpg 1596w"
+                  images/150821-tunnel-325-md-min.jpg 505w,
+                  images/150821-tunnel-325-lg-min.jpg 898w,
+                  images/150821-tunnel-325-xl-min.jpg 1596w"
                   src="data:image/gif;base64,R0lGODlhAQABAAAAADs="
                   alt="">
         </div>
       </div>
     </div>
-
-    <script>
-    // Test for Object and apply if not supported
-    if(!('objectFit' in document.body.style)) {
-        objectFitImages();
-    }
-
-    // Modals Example
-    var modals = document.querySelectorAll('.dcf-modal');
-    var modal = new DCFModal(modals, bodyScrollLock);
-    modal.initialize();
-
-    // Tabs Example
-    const tabGroups = document.querySelectorAll('.dcf-tabs');
-    const tabGroup = new DCFTabs(tabGroups);
-    tabGroup.initialize();
-
-    // Table Example
-    const tables = document.querySelectorAll('.dcf-table');
-    const table = new DCFTable(tables);
-    table.initialize();
-
-    // Slideshow Example
-    const openCaptionEvent = new Event('openCaption');
-    const closeCaptionEvent = new Event('closeCaption');
-    const slideshows = document.querySelectorAll('.dcf-slideshow');
-    const uls = document.querySelectorAll('.dcf-slideshow ul');
-
-    const slideshow = new DCFSlideshow(slideshows, uls, openCaptionEvent, closeCaptionEvent);
-    // const slideshowTheme = new DCFSlideshowTheme(slideshows, openCaptionEvent, closeCaptionEvent);
-
-    slideshow.initialize();
-    // slideshowTheme.initialize();
-
-    // Lazy Load Example
-    const images = document.querySelectorAll('[loading=lazy], .dcf-lazy-load');
-    const observerConfig = {
-      // extend intersection root margin by 50px to start intersection earlier by 50px
-      rootMargin: '0px 0px 50px 0px',
-      threshold: [0, 0.5]
-    };
-    const enterClassNames = [];
-    const unlLazyLoad = new DCFLazyLoad(images, observerConfig, enterClassNames);
-    unlLazyLoad.initialize();
-
-    // WebP Support Example
-    DCFUtility.flagSupportsWebP();
-
-    // JavaScript Support Example
-    DCFUtility.flagSupportsJavaScript();
-
-    const keyframesClose1 = [
-      {
-        transform: 'rotate(45deg)',
-        transformOrigin: '50% 50%'
-      },
-      {
-        transform: 'rotate(0deg)',
-        transformOrigin: '50% 50%'
-      }
-    ];
-    const keyframesClose2 = [
-      {
-        transform: 'rotate(-45deg)',
-        transformOrigin: '50% 50%'
-      },
-      {
-        transform: 'rotate(0deg)',
-        transformOrigin: '50% 50%'
-      }
-    ];
-    const keyframesOpen1 = [
-      {
-        transform: 'rotate(0deg)',
-        transformOrigin: '50% 50%'
-      },
-      {
-        transform: 'rotate(45deg)',
-        transformOrigin: '50% 50%'
-      }
-    ];
-    const keyframesOpen2 = [
-      {
-        transform: 'rotate(0deg)',
-        transformOrigin: '50% 50%'
-      },
-      {
-        transform: 'rotate(-45deg)',
-        transformOrigin: '50% 50%'
-      }
-    ];
-    const options = {
-      duration: 250,
-      fill: 'forwards'
-    };
-
-    Array.prototype.forEach.call(slideshows, (slideshow) => {
-      // Slideshow Controls
-      let ctrlGroup = slideshow.querySelector('[aria-label = "slideshow controls"]'); // DCF
-      let ctrls = ctrlGroup.querySelectorAll('li');
-
-      Array.prototype.forEach.call(ctrls, (ctrl) => {
-        if (ctrl.getAttribute('id') === 'previous') {
-          let ctrlButton = ctrl.querySelector('button');
-          ctrlButton.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'dcf-inverse');
-          ctrlButton.innerHTML =
-                  '<svg class="dcf-h-4 dcf-w-4 dcf-fill-current" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">' +
-                  '<path d="M21.746.064a.504.504 0 0 0-.504.008l-19 11.5a.499.499 0 0 0-.001.856l19' +
-                  ' 11.5A.501.501 0 0 0 22 23.5V.5a.5.5 0 0 0-.254-.436z"></path>' +
-                  '</svg>';
-        } else if (ctrl.getAttribute('id') === 'next') {
-          let ctrlButton = ctrl.querySelector('button');
-          ctrlButton.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'dcf-inverse');
-          ctrlButton.innerHTML =
-                  '<svg class="dcf-h-4 dcf-w-4 dcf-fill-current" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">' +
-                  '<path d="M21.759 11.577L2.786.077a.499.499 0 0 0-.759.428v23a.498.498 ' +
-                  '0 0 0 .5.5c.09 0 .18-.024.259-.072l18.973-11.5a.5.5 0 0 0 0-.856z"></path>' +
-                  '</svg>';
-        }
-      });
-      // Caption Button
-      let figures = slideshow.querySelectorAll('.dcf-slideshow figure');
-      Array.prototype.forEach.call(figures, (figure) => {
-        let captionBtn = figure.querySelector('button');
-        if (!(typeof captionBtn === 'undefined')) {
-          captionBtn.innerHTML = '<svg class="dcf-h-4 dcf-w-4 dcf-fill-current" ' +
-                  'width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">' +
-                  '<path class="theme-icon-slide-caption-open" ' +
-                  'd="M1,3h19c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1C0.4,1,0,1.4,0,2C0,2.6,0.4,3,1,3z"/>' +
-                  '<path class="theme-icon-slide-caption-open" ' +
-                  'd="M1,8h15c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1C0.4,6,0,6.4,0,7C0,7.6,0.4,8,1,8z"/>' +
-                  '<path class="theme-icon-slide-caption-close-1" ' +
-                  'd="M1,13h22c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,12.6,0.4,13,1,13z"/>' +
-                  '<path class="theme-icon-slide-caption-close-2" ' +
-                  'd="M1,13h22c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,12.6,0.4,13,1,13z"/>' +
-                  '<path class="theme-icon-slide-caption-open" ' +
-                  'd="M1,18h18c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,17.6,0.4,18,1,18z"/>' +
-                  '<path class="theme-icon-slide-caption-open" ' +
-                  'd="M1,23h15c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,22.6,0.4,23,1,23z"/>' +
-                  '</svg>';
-        }
-      });
-    });
-    let slideBtns = document.querySelectorAll('.dcf-btn-slide');
-    Array.prototype.forEach.call(slideBtns, (slideBtn) => {
-      slideBtn.classList.add('dcf-d-flex', 'dcf-ai-center', 'dcf-pt-4', 'dcf-pb-4', 'dcf-white');
-    });
-    let buttons = document.querySelectorAll('.dcf-btn-slide-caption');
-    Array.prototype.forEach.call(buttons, (button) => {
-      let caption = button.previousElementSibling;
-      let close1 = button.querySelector('.theme-icon-slide-caption-close-1');
-      let close2 = button.querySelector('.theme-icon-slide-caption-close-2');
-
-      caption.addEventListener('openCaption', () => {
-        close1.animate(keyframesClose1, options);
-        close2.animate(keyframesClose2, options);
-      }, false);
-
-      caption.addEventListener('closeCaption', () => {
-        close1.animate(keyframesOpen1, options);
-        close2.animate(keyframesOpen2, options);
-      }, false);
-    });
-
-    //Date Picker
-    var datePickers = document.querySelectorAll('.dcf-datepicker');
-    datePickers.forEach(function (dp) {
-      new DCFDatepicker(dp);
-    });
-
-    // Card as Links
-    const cards = document.querySelectorAll('.dcf-card-as-link');
-    var cardAsLink = new DCFCardAsLink(cards);
-    cardAsLink.initialize();
-  </script>
-
   </main>
   <footer class="dcf-footer" id="dcf-footer">
     Footer markup here
   </footer>
+  <script src="js/starter-main.js"></script>
 </body>
