@@ -17,7 +17,6 @@
     Header markup here
   </header>
   <main class="dcf-wrapper" id="dcf-main" tabindex="-1" role="main">
-    <!-- Slideshow WIP -->
     <div class="dcf-bleed dcf-wrapper dcf-pt-9 dcf-pb-9">
       <div class="dcf-tabs" id="tab-group-1">
         <h2>Tab Group</h2>
@@ -73,10 +72,10 @@
     </div>
 
     <h1>Slideshow Test</h1>
-    <div class="dcf-bleed dcf-wrapper dcf-pt-9 dcf-pb-9 unl-bg-lightest-gray">
+    <div class="dcf-bleed dcf-wrapper dcf-pt-3 dcf-pb-6 unl-bg-lightest-gray">
       <div class="dcf-grid dcf-mb-6">
         <div class="dcf-col-100% dcf-col-33%-start@sm dcf-col-50%-start@lg">
-          <div class="dcf-slideshow dcf-slideshow-nojs" role="region" aria-label="slideshow" tabindex="0">
+          <div class="dcf-slideshow dcf-slideshow-nojs" role="region" aria-label="slideshow foo" data-shuffle="true" data-play="auto" data-transition="fade" data-rate="2000">
             <ul>
               <!-- Slide 1 -->
               <li>
@@ -91,8 +90,19 @@
               <li>
                 <figure>
                   <div class="dcf-ratio dcf-ratio-16x9 dcf-ratio-1x1@sm dcf-ratio-16x9@lg">
-                    <img class="dcf-d-block dcf-ratio-child dcf-obj-fit-cover" src="images/150815-commencement-324-xl-min.jpg" alt="">
-
+                    <img
+                            class="dcf-d-block dcf-ratio-child dcf-obj-fit-cover"
+                            data-sizes="(min-width: 41.956em) 43vw, 88vw"
+                            data-src="images/150815-commencement-324-sm-min.jpg"
+                            data-srcset="images/150815-commencement-324-sm-min.jpg 284w,
+                         images/150815-commencement-324-md-min.jpg 505w,
+                         images/150815-commencement-324-lg-min.jpg 898w,
+                         images/150815-commencement-324-xl-min.jpg 1596w"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAADs="
+                            alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
+                    <noscript>
+                      <img class="dcf-d-block dcf-ratio-child dcf-obj-fit-cover" src="images/150815-commencement-324-sm-min.jpg" alt="Nilmar Robledo Caicedo from Colombia shakes hands after receiving his masters degree in agricultural economics.">
+                    </noscript>
                   </div>
                   <figcaption>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. <small class="dcf-txt-xs dcf-txt-nowrap">Illustration by Jane Doe</small></figcaption>
                 </figure>
@@ -103,15 +113,29 @@
                   <img class="dcf-d-block dcf-ratio-child dcf-obj-fit-cover" src="images/150815-commencement-324-xl-min.jpg" alt="">
                 </div>
               </li>
+              <!-- Slide 4  no figure-->
+              <li>
+                <div class="dcf-p-3">
+                  <h3>Lorem ipsum dolor</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit, ante quis eleifend consectetur, eros tortor aliquam turpis, venenatis blandit est quam ac odio. Curabitur euismod enim ac lobortis condimentum. Cras at vehicula eros.</p>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="dcf-grid">
         <div class="dcf-col-100% dcf-col-33%-start@sm dcf-col-50%-start@lg">
-          <div class="dcf-slideshow dcf-slideshow-nojs" data-fade role="region" aria-label="slideshow" tabindex="0">
+          <div class="dcf-slideshow dcf-slideshow-nojs" role="region" aria-label="slideshow bar">
             <ul>
-              <!-- Slide 1 -->
+              <!-- Slide 1  no figure-->
+              <li>
+                <div class="dcf-p-3">
+                  <h3>Lorem ipsum dolor</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit, ante quis eleifend consectetur, eros tortor aliquam turpis, venenatis blandit est quam ac odio. Curabitur euismod enim ac lobortis condimentum. Cras at vehicula eros.</p>
+                </div>
+              </li>
+              <!-- Slide 2 -->
               <li>
                 <figure>
                   <div class="dcf-ratio dcf-ratio-16x9 dcf-ratio-1x1@sm dcf-ratio-16x9@lg">
@@ -121,7 +145,7 @@
                   <figcaption>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. <small class="dcf-txt-xs dcf-txt-nowrap">Illustration by Jane Doe</small></figcaption>
                 </figure>
               </li>
-              <!-- Slide 2 -->
+              <!-- Slide 3 -->
               <li>
                 <figure>
                   <div class="dcf-ratio dcf-ratio-16x9 dcf-ratio-1x1@sm dcf-ratio-16x9@lg">
@@ -130,7 +154,7 @@
                   <figcaption>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. <small class="dcf-txt-xs dcf-txt-nowrap">Illustration by Jane Doe</small></figcaption>
                 </figure>
               </li>
-              <!--Slide 3 with no figcaption-->
+              <!--Slide 4 with no figcaption-->
               <li>
                 <div class="dcf-ratio dcf-ratio-16x9 dcf-ratio-1x1@sm dcf-ratio-16x9@lg">
                   <img class="dcf-d-block dcf-ratio-child dcf-obj-fit-cover" src="images/150815-commencement-324-xl-min.jpg" alt="">
@@ -141,6 +165,7 @@
         </div>
       </div>
     </div>
+
     <h1>Modal Test</h1>
     <button class="dcf-btn dcf-btn-primary dcf-btn-toggle-modal" data-toggles-modal="test-modal-1" type="button" disabled>Toggle Modal 1</button>
     <div class="dcf-modal" id="test-modal-1" hidden>
