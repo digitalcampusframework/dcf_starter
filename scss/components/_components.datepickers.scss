@@ -4,11 +4,11 @@
 
 
 .theme .dcf-datepicker-dialog[aria-hidden="true"] {
-  transition: opacity $timing-fade-out $easing-fade-out;
+  transition: opacity $transition-duration-fade-out $transition-timing-fn-fade-out;
 }
 
 .theme .dcf-datepicker-dialog[aria-hidden="false"] {
-  transition: opacity $timing-fade-in $easing-fade-in;
+  transition: opacity $transition-duration-fade-in $transition-timing-fn-fade-in;
 }
 
 .theme .dcf-datepicker-dialog-header {
