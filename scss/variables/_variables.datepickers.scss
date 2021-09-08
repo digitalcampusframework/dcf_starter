@@ -3,6 +3,10 @@
 //////////////////////////////////
 
 
+@import '_variables.color-palette';
+@import '_variables.sizing';
+
+
 // Border radius
 $border-radius-datepicker-dialog-roundrect: true;                   // Datepicker dialog border-radius roundrect? True/false
 $border-radius-datepicker-date-roundrect: true;                     // Datepicker date border-radius roundrect? True/false
