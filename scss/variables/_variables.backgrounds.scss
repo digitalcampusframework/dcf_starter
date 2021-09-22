@@ -9,3 +9,6 @@
 // Background color
 $bg-color-overlay-dark: fade-out($gray-darkest,.05);  // Dark overlay background-color for modals
 $bg-color-overlay-light: fade-out($white,.05);        // Light overlay background-color for modals
+
+$bg-color-dialog-light-mode: $white;                  // Datepicker dialog background-color in light mode
+$bg-color-dialog-dark-mode: $gray-lightest;           // Datepicker dialog background-color in dark mode
