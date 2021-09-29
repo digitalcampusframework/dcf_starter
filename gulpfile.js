@@ -74,6 +74,7 @@
     'dcf-lazyLoad.js',
     'dcf-modal.js',
     'dcf-navMenuToggle.js',
+    'dcf-notice.js',
     'dcf-slideshow.js',
     'dcf-table.js',
     'dcf-tabs.js',

@@ -11,6 +11,16 @@ require(['js/dcf-utility'], function(DCFUtilityModule) {
   DCFUtilityModule.DCFUtility.flagSupportsJavaScript();
 });
 
+// Notice Example
+require(['js/dcf-notice'], function(DCFNoticeModule) {
+  let notice = new DCFNoticeModule.DCFNotice();
+  notice.initialize();
+
+  // Dynamic notice
+  var errorContainer = document.getElementById('errorContainer');
+  notice.appendNotice(errorContainer, 'Dynamic Error Message', '<strong>Error:</strong> This is a dynamic error message.', 'negate');
+});
+
 // Modals Example
 require(['js/dcf-modal'], function(DCFModalModule) {
   let modals = document.querySelectorAll('.dcf-modal');
