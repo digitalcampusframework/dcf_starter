@@ -13,7 +13,7 @@
     del             = require('del'),
     noop            = require('gulp-noop'),
     size            = require('gulp-size'),
-    sass            = require('gulp-sass'),
+    sass            = require('gulp-sass')(require('sass')),
     sassGlob        = require('gulp-sass-glob'),
     autoprefixer    = require('autoprefixer'),
     objectFitImages = require('postcss-object-fit-images'),
@@ -53,7 +53,6 @@
     ],
     sassOpts: {
       sourceMap       : true,
-      outputStyle     : 'nested',
       includePaths:   [ 'node_modules/modularscale-sass/stylesheets' ],
       precision       : 2,
       errLogToConsole : true
@@ -90,7 +89,6 @@
       .pipe(sourcemaps ? sourcemaps.write('.') : noop())
       .pipe(size({ showFiles:true }))
       .pipe(gulp.dest(cssConfig.build));
-
   }
   exports.css = gulp.series(cleanCSS, css);
 
