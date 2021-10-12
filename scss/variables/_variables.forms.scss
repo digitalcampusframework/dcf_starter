@@ -3,6 +3,7 @@
 ////////////////////////////
 
 
+@import '_variables.badges';
 @import '_variables.body';
 @import '_variables.borders';
 @import '_variables.color-palette';
@@ -81,6 +82,11 @@ $padding-bottom-fieldset: $length-em-4;                         // Padding-botto
 $padding-left-fieldset: $length-vw-1;                           // Padding-left of fieldset: 3.16vw
 $padding-right-fieldset: $length-vw-1;                          // Padding-right of fieldset: 3.16vw
 $padding-top-fieldset: $length-em-4;                            // Padding-top of fieldset: 1em
+
+$padding-bottom-required: $padding-bottom-badge;                // Padding-bottom of required label: .42em
+$padding-left-required: $padding-left-badge-pill;               // Padding-left of required label: .75em
+$padding-right-required: $padding-right-badge-pill;             // Padding-right of required label: .75em
+$padding-top-required: $padding-top-badge;                      // Padding-top of required label: .42em
 
 $padding-bottom-input: $length-em-2;                            // Padding-bottom of input field: .56em
 $padding-left-input: $length-em-3;                              // Padding-left of input field: .75em
