@@ -13,7 +13,7 @@
     del             = require('del'),
     noop            = require('gulp-noop'),
     size            = require('gulp-size'),
-    sass            = require('gulp-sass')(require('sass')),
+    sass            = require('gulp-sass'),
     sassGlob        = require('gulp-sass-glob'),
     autoprefixer    = require('autoprefixer'),
     objectFitImages = require('postcss-object-fit-images'),
@@ -53,6 +53,7 @@
     ],
     sassOpts: {
       sourceMap       : true,
+      outputStyle     : 'nested',
       includePaths:   [ 'node_modules/modularscale-sass/stylesheets' ],
       precision       : 2,
       errLogToConsole : true
