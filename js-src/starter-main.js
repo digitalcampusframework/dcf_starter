@@ -18,7 +18,7 @@ require(['js/dcf-notice'], function(DCFNoticeModule) {
 
   // Dynamic notice
   var errorContainer = document.getElementById('errorContainer');
-  notice.appendNotice(errorContainer, 'Dynamic Error Message', '<strong>Error:</strong> This is a dynamic error message.', 'negate');
+  notice.appendNotice(errorContainer, 'Dynamic Error Message', '<strong>Error:</strong> This is a dynamic error message.', 'danger');
 });
 
 // Modals Example

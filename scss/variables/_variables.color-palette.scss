@@ -3,20 +3,47 @@
 /////////////////////////////
 
 
-// BRAND COLORS
+// PRIMARY BRAND
+$color-brand-alpha: #d00000;    // Scarlet
+$color-brand-beta: #fefdfa;     // Cream
+$color-brand-gamma: #c7c8ca;    // Gray
 
-// Define brand colors
-$color-brand-alpha: #30c;
-$color-brand-beta: #c00;
+$scarlet: $color-brand-alpha;
+$cream: $color-brand-beta;
+$gray: $color-brand-gamma;
 
-// Optionally assign names to brand colors
-// $namedcolor1: $color-brand-alpha;
-// $namedcolor2: $color-brand-beta;
+$scarlet-shade: scale-color($scarlet, $saturation: 10%, $lightness: -24%);
+$scarlet-tint: #f6e6e3;
 
 
-// UI COLORS
+// SECONDARY BRAND
+$color-brand-delta: #001738;    // Navy
+$color-brand-epsilon: #42a7c6;  // Cerulean
 
-// Neutrals
+$navy: $color-brand-delta;
+$cerulean: $color-brand-epsilon;
+
+$light-cerulean: mix($cream, $cerulean, 25%); // #71bdd3
+$lighter-cerulean: mix($cream, $cerulean, 50%); // #
+
+
+// TERTIARY / SCREEN
+$color-brand-zeta: #00784e;     // Green
+$color-brand-eta: #007197;      // Blue
+$color-brand-theta: #b32d9c;    // Purple
+$color-brand-iota: #ffd74e;     // Yellow
+
+$green: $color-brand-zeta;
+$blue: $color-brand-eta;
+$purple: $color-brand-theta;
+$yellow: $color-brand-iota;
+
+$light-green: #e7f1ea;
+$light-blue: #e7f0f0;
+$light-purple: #f7eaf1;
+
+
+// NEUTRALS
 $white: #fff;
 $black: #000;
 
