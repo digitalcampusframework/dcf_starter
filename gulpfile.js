@@ -74,6 +74,7 @@
     'dcf-lazyLoad.js',
     'dcf-modal.js',
     'dcf-navMenuToggle.js',
+    'dcf-notice.js',
     'dcf-slideshow.js',
     'dcf-table.js',
     'dcf-tabs.js',
@@ -89,7 +90,6 @@
       .pipe(sourcemaps ? sourcemaps.write('.') : noop())
       .pipe(size({ showFiles:true }))
       .pipe(gulp.dest(cssConfig.build));
-
   }
   exports.css = gulp.series(cleanCSS, css);
 
