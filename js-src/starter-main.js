@@ -28,6 +28,13 @@ require(['js/dcf-modal'], function(DCFModalModule) {
   modal.initialize();
 });
 
+// Pagination Example
+require(['js/dcf-pagination'], function(DCFPaginationModule) {
+  const paginationLists = document.querySelectorAll('.dcf-pagination');
+  const pagination = new DCFPaginationModule.DCFPagination(paginationLists);
+  pagination.initialize();
+});
+
 // Tabs Example
 require(['js/dcf-tabs'], function(DCFTabsModule) {
   const tabGroups = document.querySelectorAll('.dcf-tabs');
