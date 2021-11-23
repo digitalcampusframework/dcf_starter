@@ -30,8 +30,8 @@ require(['js/dcf-modal'], function(DCFModalModule) {
 
 // Pagination Example
 require(['js/dcf-pagination'], function(DCFPaginationModule) {
-  const paginationLists = document.querySelectorAll('.dcf-pagination');
-  const pagination = new DCFPaginationModule.DCFPagination(paginationLists);
+  const paginationNavs = document.querySelectorAll('.dcf-pagination');
+  const pagination = new DCFPaginationModule.DCFPagination(paginationNavs);
   pagination.initialize();
 });
 
