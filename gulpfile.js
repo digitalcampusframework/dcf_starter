@@ -75,6 +75,7 @@
     'dcf-modal.js',
     'dcf-navMenuToggle.js',
     'dcf-notice.js',
+    'dcf-pagination.js',
     'dcf-slideshow.js',
     'dcf-table.js',
     'dcf-tabs.js',
