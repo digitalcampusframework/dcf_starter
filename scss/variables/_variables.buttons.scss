@@ -12,21 +12,19 @@
 // Background color
 $bg-color-button-primary-light-mode: $color-link-light-mode;              // Background-color for primary button in light mode
 $bg-color-button-primary-dark-mode: $color-link-dark-mode;                // Background-color for primary button in dark mode
+$bg-color-button-primary: var(--bg-btn-primary);
 
 $bg-color-button-secondary-light-mode: $bg-color-body-light-mode;         // Background-color for secondary button in light mode
 $bg-color-button-secondary-dark-mode: $bg-color-body-dark-mode;           // Background-color for secondary button in dark mode
+$bg-color-button-secondary: var(--bg-btn-secondary);
 
-$bg-color-button-tertiary-light-mode: transparent;                        // Background-color for tertiary button in light mode
-$bg-color-button-tertiary-dark-mode: transparent;                         // Background-color for tertiary button in dark mode
+$bg-color-button-tertiary: transparent;                                   // Background-color for tertiary button
 
-$bg-color-button-inverse-primary-light-mode: $bg-color-body-light-mode;   // Background-color for inverse primary button in light mode
-$bg-color-button-inverse-primary-dark-mode: $bg-color-body-dark-mode;     // Background-color for inverse primary button in dark mode
+$bg-color-button-inverse-primary: $bg-color-body-light-mode;              // Background-color for inverse primary button
 
-$bg-color-button-inverse-secondary-light-mode: transparent;               // Background-color for inverse secondary button in light mode
-$bg-color-button-inverse-secondary-dark-mode: transparent;	              // Background-color for inverse secondary button in dark mode
+$bg-color-button-inverse-secondary-light-mode: transparent;               // Background-color for inverse secondary button
 
-$bg-color-button-inverse-tertiary-light-mode: transparent;                // Background-color for inverse tertiary button in light mode
-$bg-color-button-inverse-tertiary-dark-mode: transparent;                 // Background-color for inverse tertiary button in dark mode
+$bg-color-button-inverse-tertiary-light-mode: transparent;                // Background-color for inverse tertiary button
 
 
 // Border radius
@@ -34,23 +32,19 @@ $border-radius-button-roundrect: true;                                    // But
 
 
 // Border color
-$border-color-button-primary-light-mode: $bg-color-button-primary-light-mode;                 // Border-color for primary button in light mode
-$border-color-button-primary-dark-mode: $bg-color-button-primary-dark-mode;                   // Border-color for primary button in dark mode
+$border-color-button-primary-light-mode: $bg-color-button-primary-light-mode;   // Border-color for primary button in light mode
+$border-color-button-primary-dark-mode: $bg-color-button-primary-dark-mode;     // Border-color for primary button in dark mode
+$border-color-button-primary: var(--b-btn-primary);
 
-$border-color-button-secondary-light-mode: currentColor;                                      // Border-color for secondary button in light mode
-$border-color-button-secondary-dark-mode: currentColor;                                       // Border-color for secondary button in dark mode
+$border-color-button-secondary: currentColor;                                   // Border-color for secondary button
 
-$border-color-button-tertiary-light-mode: transparent;                                        // Border-color for tertiary button in light mode
-$border-color-button-tertiary-dark-mode: transparent;                                         // Border-color for tertiary button in dark mode
+$border-color-button-tertiary: transparent;                                     // Border-color for tertiary button
 
-$border-color-button-inverse-primary-light-mode: $bg-color-button-inverse-primary-light-mode; // Border-color for inverse primary button in light mode
-$border-color-button-inverse-primary-dark-mode: $bg-color-button-inverse-primary-dark-mode;   // Border-color for inverse primary button in dark mode
+$border-color-button-inverse-primary: $bg-color-button-inverse-primary;         // Border-color for inverse primary button
 
-$border-color-button-inverse-secondary-light-mode: currentColor;                              // Border-color for inverse secondary button in light mode
-$border-color-button-inverse-secondary-dark-mode: currentColor;                               // Border-color for inverse secondary button in dark mode
+$border-color-button-inverse-secondary: $border-color-button-secondary;         // Border-color for inverse secondary button
 
-$border-color-button-inverse-tertiary-light-mode: transparent;                                // Border-color for inverse tertiary button in light mode
-$border-color-button-inverse-tertiary-dark-mode: transparent;                                 // Border-color for inverse tertiary button in dark mode
+$border-color-button-inverse-tertiary: $border-color-button-tertiary;           // Border-color for inverse tertiary button
 
 
 // Border style
@@ -64,21 +58,21 @@ $border-width-button: 1px;                                                // But
 // Color
 $color-button-primary-light-mode: $bg-color-body-light-mode;              // Color (text) for primary button in light mode
 $color-button-primary-dark-mode: $bg-color-body-light-mode;               // Color (text) for primary button in dark mode
+$color-button-primary: var(--btn-primary);
 
 $color-button-secondary-light-mode: $color-link-light-mode;               // Color (text) for secondary button in light mode
 $color-button-secondary-dark-mode: $color-link-dark-mode;                 // Color (text) for secondary button in dark mode
+$color-button-secondary: var(--btn-secondary);
 
 $color-button-tertiary-light-mode: $color-link-light-mode;                // Color (text) for tertiary button in light mode
 $color-button-tertiary-dark-mode: $color-link-dark-mode;                  // Color (text) for tertiary button in dark mode
+$color-button-tertiary: var(--btn-tertiary);
 
-$color-button-inverse-primary-light-mode: inherit;                        // Color (text) for inverse primary button in light mode
-$color-button-inverse-primary-dark-mode: inherit;                         // Color (text) for inverse primary button in dark mode
+$color-button-inverse-primary: inherit;                                   // Color (text) for inverse primary button
 
-$color-button-inverse-secondary-light-mode: $bg-color-body-light-mode;    // Color (text) for inverse secondary button in light mode
-$color-button-inverse-secondary-dark-mode: $bg-color-body-dark-mode;      // Color (text) for inverse secondary button in dark mode
+$color-button-inverse-secondary: $bg-color-button-inverse-primary;        // Color (text) for inverse secondary button
 
-$color-button-inverse-tertiary-light-mode: $bg-color-body-light-mode;     // Color (text) for inverse tertiary button in light mode
-$color-button-inverse-tertiary-dark-mode: $bg-color-body-dark-mode;       // Color (text) for inverse tertiary button in dark mode
+$color-button-inverse-tertiary: $bg-color-button-inverse-primary;         // Color (text) for inverse tertiary button
 
 
 // Font size

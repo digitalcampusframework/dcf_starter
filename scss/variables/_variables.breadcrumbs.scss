@@ -8,9 +8,13 @@
 @import '_variables.sizing';
 
 
-// Breadcrumb arrow
+// Border color
 $breadcrumb-arrow-color-light-mode: $gray-dark;   // Color of breadcrumb arrows in light mode
 $breadcrumb-arrow-color-dark-mode: $gray-light;   // Color of breadcrumb arrows in dark mode
+$border-color-breadcrumb-arrow: var(--b-breadcrumb-arrow)
+
+
+// Sizing
 $breadcrumb-arrow-size: #{ms(-8)}em;              // Size of breadcrumbs arrows: .32em
 
 
