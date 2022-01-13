@@ -16,6 +16,14 @@ $bg-color-input-light-mode: $white;                             // Field backgro
 $bg-color-input-dark-mode: $gray-darker;                        // Field background color in dark mode
 $bg-color-input: var(--bg-input, $default-bg-input);
 
+$bg-color-input-disabled-light-mode: $gray-lighter;             // Disabled input background color in light mode
+$bg-color-input-disabled-dark-mode: $gray-darker;               // Disabled input background color in dark mode
+$bg-color-input-disabled: var(--bg-input-disabled);
+
+$bg-color-required-light-mode: transparent;                     // Required background color in light mode
+$bg-color-required-dark-mode: rgba(157,0,0,.25);                // Required background color in dark mode
+$bg-color-required: var(--bg-required);
+
 
 // Border color
 $border-color-fieldset-light-mode: $gray-lighter;               // Fieldset border-color in light mode
@@ -30,8 +38,8 @@ $border-color-input-hover-light-mode: $gray;                    // Input field b
 $border-color-input-hover-dark-mode: $gray;                     // Input field border-color when hovered in dark mode
 $border-color-input-hover: var(--b-input-hover);
 
-$border-color-input-focus-light-mode: $color-brand-alpha;       // Input field border-color when focused in light mode
-$border-color-input-focus-dark-mode: $color-brand-alpha;        // Input field border-color when focused in dark mode
+$border-color-input-focus-light-mode: $brand-alpha;             // Input field border-color when focused in light mode
+$border-color-input-focus-dark-mode: $brand-alpha;        	    // Input field border-color when focused in dark mode
 $border-color-input-focus: var(--b-input-focus);
 
 
@@ -51,8 +59,9 @@ $border-width-input: 1px;                                       // Input field b
 // Color
 $color-form-help: var(--gray-dark);                             // Form help text color
 
-$color-required-label-light-mode: $color-required;              // Required label text color in light mode
-$color-required-label-dark-mode: $color-required;               // Required label text color in dark mode
+$color-required-label-light-mode: $scarlet;                     // Required label text color in light mode
+$color-required-label-dark-mode: $white;                        // Required label text color in dark mode
+$color-required-label: var(--required);
 
 
 // Font size

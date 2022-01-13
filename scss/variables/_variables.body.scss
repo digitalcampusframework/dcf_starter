@@ -16,11 +16,3 @@ $bg-color-body: var(--bg-body);
 $color-body-light-mode: $gray-darker;                   // Body text color in light mode -- strive for WCAG AAA (minimum contrast ratio of 7.0) for body text
 $color-body-dark-mode: $gray-lighter;                   // Body text color in dark mode -- strive for WCAG AAA (minimum contrast ratio of 7.0) for body text
 $color-body: var(--body);
-
-$color-light-text-light-mode: $gray-dark;               // Light text color in light mode -- must meet WCAG AA (minimum contrast ratio of 4.5)
-$color-light-text-dark-mode: $gray-light;               // Light text color in dark mode -- must meet WCAG AA (minimum contrast ratio of 4.5)
-$color-light-text: var(--gray-dark);
-
-$color-inverse-light-mode: $bg-color-body-light-mode;   // Inverse text color in light mode
-$color-inverse-dark-mode: $bg-color-body-dark-mode;     // Inverse text color in dark mode
-$color-inverse: var(--inverse);

@@ -8,8 +8,8 @@
 
 
 // Color
-$color-link-light-mode: $color-brand-alpha;                       // Link color in light mode
-$color-link-dark-mode: $color-brand-alpha;                        // Link color in dark mode
+$color-link-light-mode: $brand-alpha;                             // Link color in light mode
+$color-link-dark-mode: $brand-alpha;                              // Link color in dark mode
 $color-link: var(--link);
 
 $color-visited-light-mode: darken($color-link-light-mode, 10%);   // TODO: finalize state colors for theme

@@ -20,11 +20,11 @@ $bg-color-button-secondary: var(--bg-btn-secondary);
 
 $bg-color-button-tertiary: transparent;                                   // Background-color for tertiary button
 
-$bg-color-button-inverse-primary: $bg-color-body-light-mode;              // Background-color for inverse primary button
+$bg-color-button-inverse-primary: $gray-lighter;                          // Background-color for inverse primary button
 
-$bg-color-button-inverse-secondary-light-mode: transparent;               // Background-color for inverse secondary button
+$bg-color-button-inverse-secondary: transparent;                          // Background-color for inverse secondary button
 
-$bg-color-button-inverse-tertiary-light-mode: transparent;                // Background-color for inverse tertiary button
+$bg-color-button-inverse-tertiary: transparent;                           // Background-color for inverse tertiary button
 
 
 // Border radius
