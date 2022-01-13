@@ -7,6 +7,10 @@
 
 
 // Background color
+$bg-color-white-light-mode: $white;                               // White background-color in light mode
+$bg-color-white-dark-mode: $gray-darkest;                         // White background-color in dark mode
+$bg-color-white: var(--bg-white);
+
 $bg-color-overlay-dark-light-mode: fade-out($gray-darkest,.05);   // Dark overlay background-color for modals in light mode
 $bg-color-overlay-dark-dark-mode: fade-out($black,.06);           // Dark overlay background-color for modals in dark mode
 $bg-color-overlay-dark: var(--bg-overlay-dark);
@@ -15,6 +19,6 @@ $bg-color-overlay-light-light-mode: fade-out($white,.06);         // Light overl
 $bg-color-overlay-light-dark-mode: fade-out($black,.06);          // Light overlay background-color for modals in dark mode
 $bg-color-overlay-light: var(--bg-overlay-light);
 
-$bg-color-dialog-light-mode: $white;                  // Datepicker dialog background-color in light mode
-$bg-color-dialog-dark-mode: $gray-lightest;           // Datepicker dialog background-color in dark mode
-$bg-color-overlay-dark: var(--bg-overlay-dark);
+$bg-color-dialog-light-mode: $white;                              // Datepicker dialog background-color in light mode
+$bg-color-dialog-dark-mode: $gray-lightest;                       // Datepicker dialog background-color in dark mode
+$bg-color-dialog: var(--bg-dialog);
