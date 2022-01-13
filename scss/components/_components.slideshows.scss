@@ -18,10 +18,10 @@
 
 
 .theme .dcf-btn-slide-caption {
-  background-color: $bg-color-btn-slide-caption-light-mode;
-  border-color: $border-color-btn-slide-caption-light-mode;
+  background-color: $bg-color-overlay-dark;
+  border-color: transparent;
   bottom: 0;
-  color: $color-btn-slide-caption-light-mode;
+  color: $color-button-inverse-tertiary;
   left: 0;
   position: absolute;
   z-index: 1;
@@ -29,8 +29,8 @@
 
 
 .theme .dcf-slide-caption {
-  background-color: $bg-color-slide-caption-light-mode;
-  color: $color-slide-caption-light-mode;
+  background-color: $bg-color-overlay-dark;
+  color: $white;
   height: 100%;
   left: 0;
   padding: $padding-top-slide-caption $padding-right-slide-caption $padding-bottom-slide-caption $padding-left-slide-caption;

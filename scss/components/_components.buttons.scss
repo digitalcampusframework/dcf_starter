@@ -73,11 +73,11 @@
 
 // Inverse Buttons
 .theme .dcf-btn-inverse-primary:not(:disabled):hover {
-  background-color: fade-out($bg-color-button-inverse-primary-light-mode, .16);
+  background-color: fade-out($bg-color-button-inverse-primary, .16);
 }
 
 
 .theme .dcf-btn-inverse-secondary:not(:disabled):hover,
 .theme .dcf-btn-inverse-tertiary:not(:disabled):hover {
-  background-color: fade-out($color-button-inverse-secondary-light-mode, .84);
+  background-color: fade-out($color-button-inverse-secondary, .84);
 }

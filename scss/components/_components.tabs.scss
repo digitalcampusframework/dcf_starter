@@ -9,10 +9,10 @@
 
 
 .theme .dcf-tab[aria-selected] {
-  border-bottom-color: $bg-color-tab-selected-light-mode;
-  border-left-color: $border-color-tab-light-mode;
-  border-right-color: $border-color-tab-light-mode;
-  border-top-color: $border-color-tab-light-mode;
+  border-bottom-color: $bg-color-tab-selected;
+  border-left-color: $border-color-tab;
+  border-right-color: $border-color-tab;
+  border-top-color: $border-color-tab;
   border-style: $border-style-tab;
   border-width: $border-width-tab;
 }
@@ -28,9 +28,9 @@
 
   .theme .dcf-tabs-responsive .dcf-tab {
     border-bottom-width: 0;
-    border-left: $border-width-tab $border-style-tab $color-tab-selected-light-mode;
-    border-right: $border-width-tab $border-style-tab $border-color-tab-light-mode;
-    border-top: $border-width-tab $border-style-tab $border-color-tab-light-mode;
+    border-left: $border-width-tab $border-style-tab $color-tab-selected;
+    border-right: $border-width-tab $border-style-tab $border-color-tab;
+    border-top: $border-width-tab $border-style-tab $border-color-tab;
     margin-bottom: 0;
   }
 
