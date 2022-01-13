@@ -4,11 +4,11 @@
 
 
 // Brand: alpha
-@mixin bg-brand-alpha($imp:null) { background-color: $color-brand-alpha $imp; }
+@mixin bg-brand-alpha($imp:null) { background-color: $bg-color-brand-alpha $imp; }
 
 
 // Brand: beta
-@mixin bg-brand-beta($imp:null) { background-color: $color-brand-beta $imp; }
+@mixin bg-brand-beta($imp:null) { background-color: $bg-color-brand-beta $imp; }
 
 
 // Light
