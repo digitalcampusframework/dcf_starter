@@ -42,6 +42,10 @@ $border-color-input-focus-light-mode: $brand-alpha;             // Input field b
 $border-color-input-focus-dark-mode: $brand-alpha;        	    // Input field border-color when focused in dark mode
 $border-color-input-focus: var(--b-input-focus);
 
+$border-color-required-light-mode: transparent;                 // Required border-color in light mode
+$border-color-required-dark-mode: $scarlet-shade;               // Required border-color in dark mode
+$border-color-required: var(--b-required);
+
 
 // Border radius
 $border-radius-input-roundrect: true;                           // Input field border-radius roundrect? True/false

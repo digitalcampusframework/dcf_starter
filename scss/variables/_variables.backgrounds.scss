@@ -19,6 +19,18 @@ $bg-color-white-light-mode: $white;                               // White backg
 $bg-color-white-dark-mode: $gray-darkest;                         // White background-color in dark mode
 $bg-color-white: var(--bg-white);
 
+$bg-color-gray-light-light-mode: $gray-light;                     // Light gray background-color in light mode
+$bg-color-gray-light-dark-mode: $gray-dark;                       // Light gray background-color in dark mode
+$bg-color-gray-light: var(--bg-gray-light);
+
+$bg-color-gray-lighter-light-mode: $gray-lighter;                 // Lighter gray background-color in light mode
+$bg-color-gray-lighter-dark-mode: $gray-darker;                   // Lighter gray background-color in dark mode
+$bg-color-gray-lighter: var(--bg-gray-lighter);
+
+$bg-color-gray-lightest-light-mode: $gray-lightest;               // Lightest gray background-color in light mode
+$bg-color-gray-lightest-dark-mode: $gray-darkest;                 // Lightest gray background-color in dark mode
+$bg-color-gray-lightest: var(--bg-gray-lightest);
+
 $bg-color-inverse-light-mode: $color-body-light-mode;             // Inverse background-color in light mode
 $bg-color-inverse-dark-mode: $color-body-dark-mode;               // Inverse background-color in dark mode
 $bg-color-inverse: var(--bg-inverse);
