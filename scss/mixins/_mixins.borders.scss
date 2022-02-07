@@ -4,19 +4,11 @@
 
 
 // Brand: alpha
-@mixin b-alpha($imp:null) { border-color: $brand-alpha $imp; }          // All sides
-@mixin bt-alpha($imp:null) { border-top-color: $brand-alpha $imp; }     // Top
-@mixin br-alpha($imp:null) { border-right-color: $brand-alpha $imp; }   // Right
-@mixin bb-alpha($imp:null) { border-bottom-color: $brand-alpha $imp; }  // Bottom
-@mixin bl-alpha($imp:null) { border-left-color: $brand-alpha $imp; }    // Left
-
-
-// Brand: beta
-@mixin b-beta($imp:null) { border-color: $brand-beta $imp; }            // All sides
-@mixin bt-beta($imp:null) { border-top-color: $brand-beta $imp; }       // Top
-@mixin br-beta($imp:null) { border-right-color: $brand-beta $imp; }     // Right
-@mixin bb-beta($imp:null) { border-bottom-color: $brand-beta $imp; }    // Bottom
-@mixin bl-beta($imp:null) { border-left-color: $brand-beta $imp; }      // Left
+@mixin b-alpha($imp:null) { border-color: $brand-alpha $imp; }                          // All sides
+@mixin bt-alpha($imp:null) { border-top-color: $brand-alpha $imp; }                     // Top
+@mixin br-alpha($imp:null) { border-right-color: $brand-alpha $imp; }                   // Right
+@mixin bb-alpha($imp:null) { border-bottom-color: $brand-alpha $imp; }                  // Bottom
+@mixin bl-alpha($imp:null) { border-left-color: $brand-alpha $imp; }                    // Left
 
 
 // Light gray

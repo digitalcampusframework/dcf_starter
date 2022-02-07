@@ -7,10 +7,6 @@
 @mixin bg-brand-alpha($imp:null) { background-color: $bg-color-brand-alpha $imp; }
 
 
-// Brand: beta
-@mixin bg-brand-beta($imp:null) { background-color: $bg-color-brand-beta $imp; }
-
-
 // Light
 @mixin bg-gray-light($imp:null) { background-color: $gray-light $imp; }
 @mixin bg-gray-lighter($imp:null) { background-color: $gray-lighter $imp; }

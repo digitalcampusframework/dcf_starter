@@ -7,10 +7,6 @@
 .theme-brand-alpha { @include brand-alpha(!important); }
 
 
-// Brand: Beta
-.theme-brand-beta { @include brand-beta(!important); }
-
-
 // Light
 .theme-gray-light { @include gray-light(!important); }
 .theme-gray-lighter { @include gray-lighter(!important); }
