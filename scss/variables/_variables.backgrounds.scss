@@ -7,13 +7,9 @@
 
 
 // Background color
-$bg-color-brand-alpha-light-mode: $scarlet;                       // Alpha brand background-color (scarlet) in light mode
-$bg-color-brand-alpha-dark-mode: $scarlet;                        // Alpha brand background-color (scarlet) in dark mode
+$bg-color-brand-alpha-light-mode: $brand-alpha;                   // Alpha brand background-color (scarlet) in light mode
+$bg-color-brand-alpha-dark-mode: $brand-alpha;                    // Alpha brand background-color (scarlet) in dark mode
 $bg-color-brand-alpha: var(--bg-brand-alpha);
-
-$bg-color-brand-beta-light-mode: $scarlet;                        // Beta brand background-color () in light mode
-$bg-color-brand-beta-dark-mode: $scarlet;                         // Beta brand background-color () in dark mode
-$bg-color-brand-beta: var(--bg-brand-beta);
 
 $bg-color-white-light-mode: $white;                               // White background-color in light mode
 $bg-color-white-dark-mode: $gray-darkest;                         // White background-color in dark mode

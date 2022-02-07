@@ -21,7 +21,7 @@ $bg-color-button-inverse-tertiary: transparent;                                 
 $bg-color-button-inverse-secondary-tertiary-hover: fade-out($white, .93);           // Background-color for inverse secondary and tertiary buttons on hover
 
 $bg-color-button-primary-light-mode: $color-link-light-mode;                        // Background-color for primary button in light mode
-$bg-color-button-primary-dark-mode: $color-link-dark-mode;                          // Background-color for primary button in dark mode
+$bg-color-button-primary-dark-mode: $bg-color-button-inverse-primary;               // Background-color for primary button in dark mode
 $bg-color-button-primary: var(--bg-btn-primary);
 
 $bg-color-button-primary-hover-light-mode: $color-hover-light-mode;                 // Background-color for primary button on hover in light mode
@@ -29,7 +29,7 @@ $bg-color-button-primary-hover-dark-mode: $bg-color-button-inverse-primary-hover
 $bg-color-button-primary-hover: var(--bg-btn-primary-hover);
 
 $bg-color-button-secondary-light-mode: $bg-color-body-light-mode;                   // Background-color for secondary button in light mode
-$bg-color-button-secondary-dark-mode: $bg-color-body-dark-mode;                     // Background-color for secondary button in dark mode
+$bg-color-button-secondary-dark-mode: $bg-color-button-inverse-secondary;           // Background-color for secondary button in dark mode
 $bg-color-button-secondary: var(--bg-btn-secondary);
 
 $bg-color-button-tertiary: transparent;                                             // Background-color for tertiary button
