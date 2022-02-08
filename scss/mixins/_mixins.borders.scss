@@ -3,25 +3,33 @@
 ///////////////////////////
 
 
-// Gray
-@mixin b-color($imp:null) { border-color: $border-color-light-mode $imp; }               // All sides
-@mixin bt-color($imp:null) { border-top-color: $border-color-light-mode $imp; }          // Top
-@mixin br-color($imp:null) { border-right-color: $border-color-light-mode $imp; }        // Right
-@mixin bb-color($imp:null) { border-bottom-color: $border-color-light-mode $imp; }       // Bottom
-@mixin bl-color($imp:null) { border-left-color: $border-color-light-mode $imp; }         // Left
-
-
 // Brand: alpha
-@mixin b-alpha($imp:null) { border-color: $color-brand-alpha $imp; }          // All sides
-@mixin bt-alpha($imp:null) { border-top-color: $color-brand-alpha $imp; }     // Top
-@mixin br-alpha($imp:null) { border-right-color: $color-brand-alpha $imp; }   // Right
-@mixin bb-alpha($imp:null) { border-bottom-color: $color-brand-alpha $imp; }  // Bottom
-@mixin bl-alpha($imp:null) { border-left-color: $color-brand-alpha $imp; }    // Left
+@mixin b-alpha($imp:null) { border-color: $brand-alpha $imp; }                          // All sides
+@mixin bt-alpha($imp:null) { border-top-color: $brand-alpha $imp; }                     // Top
+@mixin br-alpha($imp:null) { border-right-color: $brand-alpha $imp; }                   // Right
+@mixin bb-alpha($imp:null) { border-bottom-color: $brand-alpha $imp; }                  // Bottom
+@mixin bl-alpha($imp:null) { border-left-color: $brand-alpha $imp; }                    // Left
 
 
-// Brand: beta
-@mixin b-beta($imp:null) { border-color: $color-brand-beta $imp; }            // All sides
-@mixin bt-beta($imp:null) { border-top-color: $color-brand-beta $imp; }       // Top
-@mixin br-beta($imp:null) { border-right-color: $color-brand-beta $imp; }     // Right
-@mixin bb-beta($imp:null) { border-bottom-color: $color-brand-beta $imp; }    // Bottom
-@mixin bl-beta($imp:null) { border-left-color: $color-brand-beta $imp; }      // Left
+// Light gray
+@mixin b-color($imp:null) { border-color: $border-color-gray-light $imp; }	            // All sides
+@mixin bt-color($imp:null) { border-top-color: $border-color-gray-light $imp; }         // Top
+@mixin br-color($imp:null) { border-right-color: $border-color-gray-light $imp; }       // Right
+@mixin bb-color($imp:null) { border-bottom-color: $border-color-gray-light $imp; }      // Bottom
+@mixin bl-color($imp:null) { border-left-color: $border-color-gray-light $imp; }        // Left
+
+
+// Lighter gray
+@mixin b-color($imp:null) { border-color: $border-color-gray-lighter $imp; }            // All sides
+@mixin bt-color($imp:null) { border-top-color: $border-color-gray-lighter $imp; }       // Top
+@mixin br-color($imp:null) { border-right-color: $border-color-gray-lighter $imp; }     // Right
+@mixin bb-color($imp:null) { border-bottom-color: $border-color-gray-lighter $imp; }    // Bottom
+@mixin bl-color($imp:null) { border-left-color: $border-color-gray-lighter $imp; }      // Left
+
+
+// Lightest gray
+@mixin b-color($imp:null) { border-color: $border-color-gray-lightest $imp; }           // All sides
+@mixin bt-color($imp:null) { border-top-color: $border-color-gray-lightest $imp; }      // Top
+@mixin br-color($imp:null) { border-right-color: $border-color-gray-lightest $imp; }    // Right
+@mixin bb-color($imp:null) { border-bottom-color: $border-color-gray-lightest $imp; }   // Bottom
+@mixin bl-color($imp:null) { border-left-color: $border-color-gray-lightest $imp; }     // Left

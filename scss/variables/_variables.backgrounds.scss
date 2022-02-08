@@ -7,8 +7,38 @@
 
 
 // Background color
-$bg-color-overlay-dark: fade-out($gray-darkest,.05);  // Dark overlay background-color for modals
-$bg-color-overlay-light: fade-out($white,.05);        // Light overlay background-color for modals
+$bg-color-brand-alpha-light-mode: $brand-alpha;                   // Alpha brand background-color (scarlet) in light mode
+$bg-color-brand-alpha-dark-mode: $brand-alpha;                    // Alpha brand background-color (scarlet) in dark mode
+$bg-color-brand-alpha: var(--bg-brand-alpha);
 
-$bg-color-dialog-light-mode: $white;                  // Datepicker dialog background-color in light mode
-$bg-color-dialog-dark-mode: $gray-lightest;           // Datepicker dialog background-color in dark mode
+$bg-color-white-light-mode: $white;                               // White background-color in light mode
+$bg-color-white-dark-mode: $gray-darkest;                         // White background-color in dark mode
+$bg-color-white: var(--bg-white);
+
+$bg-color-gray-light-light-mode: $gray-light;                     // Light gray background-color in light mode
+$bg-color-gray-light-dark-mode: $gray-dark;                       // Light gray background-color in dark mode
+$bg-color-gray-light: var(--bg-gray-light);
+
+$bg-color-gray-lighter-light-mode: $gray-lighter;                 // Lighter gray background-color in light mode
+$bg-color-gray-lighter-dark-mode: $gray-darker;                   // Lighter gray background-color in dark mode
+$bg-color-gray-lighter: var(--bg-gray-lighter);
+
+$bg-color-gray-lightest-light-mode: $gray-lightest;               // Lightest gray background-color in light mode
+$bg-color-gray-lightest-dark-mode: $gray-darkest;                 // Lightest gray background-color in dark mode
+$bg-color-gray-lightest: var(--bg-gray-lightest);
+
+$bg-color-inverse-light-mode: $color-body-light-mode;             // Inverse background-color in light mode
+$bg-color-inverse-dark-mode: $color-body-dark-mode;               // Inverse background-color in dark mode
+$bg-color-inverse: var(--bg-inverse);
+
+$bg-color-overlay-dark-light-mode: fade-out($gray-darkest,.05);   // Dark overlay background-color for modals in light mode
+$bg-color-overlay-dark-dark-mode: fade-out($black,.06);           // Dark overlay background-color for modals in dark mode
+$bg-color-overlay-dark: var(--bg-overlay-dark);
+
+$bg-color-overlay-light-light-mode: fade-out($white,.06);         // Light overlay background-color for modals in light mode
+$bg-color-overlay-light-dark-mode: fade-out($black,.06);          // Light overlay background-color for modals in dark mode
+$bg-color-overlay-light: var(--bg-overlay-light);
+
+$bg-color-dialog-light-mode: $white;                              // Datepicker dialog background-color in light mode
+$bg-color-dialog-dark-mode: $gray-lightest;                       // Datepicker dialog background-color in dark mode
+$bg-color-dialog: var(--bg-dialog);

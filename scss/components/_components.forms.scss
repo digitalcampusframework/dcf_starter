@@ -1,0 +1,18 @@
+/////////////////////////////
+// THEME / COMPONENTS / FORMS
+/////////////////////////////
+
+
+// Required
+.theme .dcf-required {
+  background-color: $bg-color-required;
+  border: 1px solid $border-color-required;
+  border-radius: $pill;
+  display: inline-block;
+  @include lh-1;
+  margin-left: $margin-left-required;
+  padding: $padding-top-required $padding-right-required $padding-bottom-required $padding-left-required;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+}

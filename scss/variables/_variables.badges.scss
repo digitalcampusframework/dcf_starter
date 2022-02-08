@@ -11,11 +11,13 @@
 // Background color
 $bg-color-badge-light-mode: $gray-dark;   // Background-color of badge in light mode
 $bg-color-badge-dark-mode: $gray-light;   // Background-color of badge in dark mode
+$bg-color-badge: var(--bg-badge);
 
 
 // Color
 $color-badge-light-mode: $white;          // Color of badge text in light mode
 $color-badge-dark-mode: $gray-darkest;    // Color of badge text in dark mode
+$color-badge: var(--badge);
 
 
 // Font size

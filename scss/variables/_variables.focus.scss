@@ -1,0 +1,12 @@
+////////////////////////////
+// THEME / VARIABLES / FOCUS
+////////////////////////////
+
+
+@import '_variables.color-palette';
+
+
+// Outline color
+$color-focus-outline-light-mode: $brand-alpha-tint-0100;    // :focus outline color in light mode
+$color-focus-outline-dark-mode: $brand-alpha-tint-0100;     // :focus outline color in dark mode
+$color-focus-outline: var(--focus-outline);

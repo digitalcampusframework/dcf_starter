@@ -1,0 +1,28 @@
+////////////////////////////////////
+// THEME / VARIABLES / COLORS (TEXT)
+////////////////////////////////////
+
+
+@import '_variables.color-palette';
+
+
+// Colors
+$color-brand-alpha-light-mode: $brand-alpha;            // Alpha brand text color (scarlet) in light mode
+$color-brand-alpha-dark-mode: $gray-lightest;           // Alpha brand text color (scarlet) in dark mode
+$color-brand-alpha: var(--brand-alpha);
+
+$color-gray-dark-light-mode: $gray-dark;                // Dark text color in light mode -- must meet WCAG AA (minimum contrast ratio of 4.5)
+$color-gray-dark-dark-mode: $gray-light;                // Dark text color in dark mode -- must meet WCAG AA (minimum contrast ratio of 4.5)
+$color-gray-dark: var(--dark-gray);
+
+$color-gray-darker-light-mode: $gray-darker;            // Darker text color in light mode -- must meet WCAG AA (minimum contrast ratio of 4.5)
+$color-gray-darker-dark-mode: $gray-lighter;            // Darker text color in dark mode -- must meet WCAG AA (minimum contrast ratio of 4.5)
+$color-gray-darker: var(--darker-gray);
+
+$color-gray-darkest-light-mode: $gray-darkest;          // Darkest text color in light mode -- must meet WCAG AA (minimum contrast ratio of 4.5)
+$color-gray-darkest-dark-mode: $gray-lightest;          // Darkest text color in dark mode -- must meet WCAG AA (minimum contrast ratio of 4.5)
+$color-gray-darkest: var(--darkest-gray);
+
+$color-inverse-light-mode: $bg-color-body-light-mode;   // Inverse text color in light mode
+$color-inverse-dark-mode: $bg-color-body-dark-mode;     // Inverse text color in dark mode
+$color-inverse: var(--inverse);

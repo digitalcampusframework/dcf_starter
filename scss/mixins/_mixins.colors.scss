@@ -7,10 +7,6 @@
 @mixin brand-alpha($imp:null) { color: $color-brand-alpha $imp; }
 
 
-// Brand: beta
-@mixin brand-beta($imp:null) { color: $color-brand-beta $imp; }
-
-
 // Light
 @mixin gray-light($imp:null) { color: $gray-light $imp; }
 @mixin gray-lighter($imp:null) { color: $gray-lighter $imp; }

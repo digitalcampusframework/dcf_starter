@@ -10,10 +10,12 @@
 
 // Background color
 $bg-color-code-light-mode: fade-out($black, .95);               // <code> background-color in light mode
-$bg-color-code-dark-mode: fade-out($black, .95);                // <code> background-color in dark mode
+$bg-color-code-dark-mode: fade-out($white, .95);                // <code> background-color in dark mode
+$bg-color-code: var(--bg-code);
+
 $bg-color-kbd: $black;                                          // <kbd> background-color: black
-$bg-color-pre-light-mode: $bg-color-code-light-mode;            // .dcf-pre background-color in light mode
-$bg-color-pre-dark-mode: $bg-color-code-light-mode;             // .dcf-pre background-color in dark mode
+
+$bg-color-pre: var(--bg-code);                                  // .dcf-pre background-color
 
 
 // Border radius
@@ -23,7 +25,9 @@ $border-radius-code: true;                                      // Roundrect bor
 // Color
 $color-code-light-mode: lighten($color-body-light-mode, 10%);   // <code> color
 $color-code-dark-mode: lighten($color-body-dark-mode, 10%);     // <code> color
-$color-kbd: $color-kbd;                                         // <kbd> color: green
+$color-code: var(--code);
+
+$color-kbd: $kbd;                                               // <kbd> color: green
 
 
 // Font size

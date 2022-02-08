@@ -1,0 +1,176 @@
+/////////////////////////////////
+// THEME / GENERIC / COLOR-SCHEME
+/////////////////////////////////
+
+
+:root {
+//   color-scheme: light dark;
+
+  // Background Colors
+  --bg-badge: #{$bg-color-badge-light-mode};
+  --bg-body: #{$bg-color-body-light-mode};
+  --bg-brand-alpha: #{$bg-color-brand-alpha-light-mode};
+  --bg-btn-inverse-primary: #{$bg-color-button-inverse-primary};
+  --bg-btn-inverse-secondary: #{$bg-color-button-inverse-secondary};
+  --bg-btn-inverse-tertiary: #{$bg-color-button-inverse-tertiary};
+  --bg-btn-primary: #{$bg-color-button-primary-light-mode};
+  --bg-btn-primary-hover: #{$bg-color-button-primary-hover-light-mode};
+  --bg-btn-secondary: #{$bg-color-button-secondary-light-mode};
+  --bg-btn-secondary-tertiary-hover: #{$bg-color-button-secondary-tertiary-hover-light-mode};
+  --bg-card: #{$bg-color-card-light-mode};
+  --bg-code: #{$bg-color-code-light-mode};
+  --bg-dialog: #{$bg-color-dialog-light-mode};
+  --bg-input: #{$bg-color-input-light-mode};
+  --bg-input-disabled: #{$bg-color-input-disabled-light-mode};
+  --bg-input-group-addon: #{$bg-color-input-group-addon-light-mode};
+  --bg-inverse: #{$bg-color-inverse-light-mode};
+  --bg-gray-light: #{$bg-color-gray-light-light-mode};
+  --bg-gray-lighter: #{$bg-color-gray-lighter-light-mode};
+  --bg-gray-lightest: #{$bg-color-gray-lightest-light-mode};
+  --bg-mark: #{$bg-color-mark-light-mode};
+  --bg-modal-header: #{$bg-color-modal-header-light-mode};
+  --bg-modal-wrapper: #{$bg-color-modal-wrapper-light-mode};
+  --bg-overlay-dark: #{$bg-color-overlay-dark-light-mode};
+  --bg-overlay-light: #{$bg-color-overlay-light-light-mode};
+  --bg-required: #{$bg-color-required-light-mode};
+  --bg-select-1: #{$bg-color-select-1-light-mode};
+  --bg-select-2: #{$bg-color-select-2-light-mode};
+  --bg-table-stripe: #{$bg-color-table-stripe-light-mode};
+  --bg-white: #{$bg-color-white-light-mode};
+
+  // Border Colors
+  --b-breadcrumb-arrow: #{$breadcrumb-arrow-color-light-mode};
+  --b-btn-primary: #{$border-color-button-primary-light-mode};
+  --b-btn-primary-hover: #{$border-color-button-primary-hover-light-mode};
+  --b-btn-secondary: #{$border-color-button-secondary};
+  --b-btn-tertiary: #{$border-color-button-tertiary};
+  --b-btn-inverse-primary: #{$border-color-button-inverse-primary};
+  --b-btn-inverse-secondary: #{$border-color-button-secondary};
+  --b-btn-inverse-tertiary: #{$border-color-button-tertiary};
+  --b-fieldset: #{$border-color-fieldset-light-mode};
+  --b-input: #{$border-color-input-light-mode};
+  --b-input-focus: #{$border-color-input-focus-light-mode};
+  --b-input-hover: #{$border-color-input-hover-light-mode};
+  --b-gray-light: #{$border-color-gray-light-light-mode};
+  --b-gray-lighter: #{$border-color-gray-lighter-light-mode};
+  --b-gray-lightest: #{$border-color-gray-lightest-light-mode};
+  --b-required: #{$border-color-required-light-mode};
+
+  // Colors
+  --active: #{$color-active-light-mode};
+  --badge: #{$color-badge-light-mode};
+  --body: #{$color-body-light-mode};
+  --brand-alpha: #{$color-brand-alpha-light-mode};
+  --btn-inverse-primary: #{$color-button-inverse-primary};
+  --btn-inverse-secondary: #{$color-button-inverse-secondary};
+  --btn-inverse-tertiary: #{$color-button-inverse-tertiary};
+  --btn-primary: #{$color-button-primary-light-mode};
+  --btn-secondary: #{$color-button-secondary-light-mode};
+  --btn-secondary-tertiary-hover: #{$color-button-secondary-tertiary-hover-light-mode};
+  --btn-tertiary: #{$color-button-tertiary-light-mode};
+  --code: #{$color-code-light-mode};
+  --gray-dark: #{$color-gray-dark-light-mode};
+  --gray-darker: #{$color-gray-darker-light-mode};
+  --gray-darkest: #{$color-gray-darkest-light-mode};
+  --focus-outline: #{$color-focus-outline-light-mode};
+  --heading: #{$color-heading-light-mode};
+  --hover: #{$color-hover-light-mode};
+  --input-group-addon: #{$color-input-group-addon-light-mode};
+  --inverse: #{$color-inverse-light-mode};
+  --inverse-active: #{$color-inverse-active-light-mode};
+  --inverse-link: #{$color-inverse-link-light-mode};
+  --inverse-hover: #{$color-inverse-hover-light-mode};
+  --inverse-visited: #{$color-inverse-visited-light-mode};
+  --link: #{$color-link-light-mode};
+  --required: #{$color-required-label-light-mode};
+  --visited: #{$color-visited-light-mode};
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+
+    // Background Colors
+    --bg-badge: #{$bg-color-badge-dark-mode};
+    --bg-body: #{$bg-color-body-dark-mode};
+    --bg-brand-alpha: #{$bg-color-brand-alpha-dark-mode};
+    --bg-btn-inverse-primary: #{$bg-color-button-inverse-primary};
+    --bg-btn-inverse-secondary: #{$bg-color-button-inverse-secondary};
+    --bg-btn-inverse-tertiary: #{$bg-color-button-inverse-tertiary};
+    --bg-btn-primary: #{$bg-color-button-primary-dark-mode};
+    --bg-btn-primary-hover: #{$bg-color-button-primary-hover-dark-mode};
+    --bg-btn-secondary: #{$bg-color-button-secondary-dark-mode};
+    --bg-btn-secondary-tertiary-hover: #{$bg-color-button-secondary-tertiary-hover-dark-mode};
+    --bg-card: #{$bg-color-card-dark-mode};
+    --bg-code: #{$bg-color-code-dark-mode};
+    --bg-dialog: #{$bg-color-dialog-dark-mode};
+    --bg-input: #{$bg-color-input-dark-mode};
+    --bg-input-disabled: #{$bg-color-input-disabled-dark-mode};
+    --bg-input-group-addon: #{$bg-color-input-group-addon-dark-mode};
+    --bg-inverse: #{$bg-color-inverse-dark-mode};
+    --bg-gray-light: #{$bg-color-gray-light-dark-mode};
+    --bg-gray-lighter: #{$bg-color-gray-lighter-dark-mode};
+    --bg-gray-lightest: #{$bg-color-gray-lightest-dark-mode};
+    --bg-mark: #{$bg-color-mark-dark-mode};
+    --bg-modal-header: #{$bg-color-modal-header-dark-mode};
+    --bg-modal-wrapper: #{$bg-color-modal-wrapper-dark-mode};
+    --bg-overlay-dark: #{$bg-color-overlay-dark-dark-mode};
+    --bg-overlay-light: #{$bg-color-overlay-light-dark-mode};
+    --bg-required: #{$bg-color-required-dark-mode};
+    --bg-select-1: #{$bg-color-select-1-dark-mode};
+    --bg-select-2: #{$bg-color-select-2-dark-mode};
+  	--bg-table-stripe: #{$bg-color-table-stripe-dark-mode};
+    --bg-white: #{$bg-color-white-dark-mode};
+
+  	// Border Colors
+    --b-breadcrumb-arrow: #{$breadcrumb-arrow-color-dark-mode};
+    --b-btn-primary: #{$border-color-button-primary-dark-mode};
+    --b-btn-primary-hover: #{$border-color-button-primary-hover-dark-mode};
+    --b-btn-secondary: #{$border-color-button-secondary};
+    --b-btn-tertiary: #{$border-color-button-tertiary};
+    --b-btn-inverse-primary: #{$border-color-button-inverse-primary};
+    --b-btn-inverse-secondary: #{$border-color-button-secondary};
+    --b-btn-inverse-tertiary: #{$border-color-button-tertiary};
+    --b-fieldset: #{$border-color-fieldset-dark-mode};
+    --b-input: #{$border-color-input-dark-mode};
+    --b-input-focus: #{$border-color-input-focus-dark-mode};
+    --b-input-hover: #{$border-color-input-hover-dark-mode};
+    --b-gray-light: #{$border-color-gray-light-dark-mode};
+    --b-gray-lighter: #{$border-color-gray-lighter-dark-mode};
+    --b-gray-lightest: #{$border-color-gray-lightest-dark-mode};
+    --b-required: #{$border-color-required-dark-mode};
+
+    // Colors
+    --active: #{$color-active-dark-mode};
+    --badge: #{$color-badge-dark-mode};
+    --body: #{$color-body-dark-mode};
+    --brand-alpha: #{$color-brand-alpha-dark-mode};
+    --btn-inverse-primary: #{$color-button-inverse-primary};
+    --btn-inverse-secondary: #{$color-button-inverse-secondary};
+    --btn-inverse-tertiary: #{$color-button-inverse-tertiary};
+    --btn-primary: #{$color-button-primary-dark-mode};
+    --btn-secondary: #{$color-button-secondary-dark-mode};
+    --btn-secondary-tertiary-hover: #{$color-button-secondary-tertiary-hover-dark-mode};
+    --btn-tertiary: #{$color-button-tertiary-dark-mode};
+    --code: #{$color-code-dark-mode};
+    --gray-dark: #{$color-gray-dark-dark-mode};
+    --gray-darker: #{$color-gray-darker-dark-mode};
+    --gray-darkest: #{$color-gray-darkest-dark-mode};
+    --focus-outline: #{$color-focus-outline-dark-mode};
+  	--heading: #{$color-heading-dark-mode};
+    --hover: #{$color-hover-dark-mode};
+    --input-group-addon: #{$color-input-group-addon-dark-mode};
+    --inverse: #{$color-inverse-dark-mode};
+    --inverse-active: #{$color-inverse-active-dark-mode};
+    --inverse-hover: #{$color-inverse-hover-dark-mode};
+    --inverse-link: #{$color-inverse-link-dark-mode};
+    --inverse-visited: #{$color-inverse-visited-dark-mode};
+    --link: #{$color-link-dark-mode};
+    --required: #{$color-required-label-dark-mode};
+    --visited: #{$color-visited-dark-mode};
+
+  }
+
+}

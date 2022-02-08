@@ -4,76 +4,62 @@
 
 
 // PRIMARY BRAND
-$color-brand-alpha: #d00000;    // Scarlet
-$color-brand-beta: #fefdfa;     // Cream
-$color-brand-gamma: #c7c8ca;    // Gray
+$brand-alpha: #039;                                   // #003399
 
-$scarlet: $color-brand-alpha;
-$cream: $color-brand-beta;
-$gray: $color-brand-gamma;
+$brand-alpha-tint-0100: lighten($brand-alpha, 64%);   // #e0ebff
+$brand-alpha-tint-0200: lighten($brand-alpha, 60%);   // #ccddff
+$brand-alpha-tint-0300: lighten($brand-alpha, 56%);   // #b8cfff
+$brand-alpha-tint-0400: lighten($brand-alpha, 52%);   // #a3c2ff
 
-$scarlet-shade: scale-color($scarlet, $saturation: 10%, $lightness: -24%);
-$scarlet-tint: #f6e6e3;
-
-
-// SECONDARY BRAND
-$color-brand-delta: #001738;    // Navy
-$color-brand-epsilon: #42a7c6;  // Cerulean
-
-$navy: $color-brand-delta;
-$cerulean: $color-brand-epsilon;
-
-$light-cerulean: mix($cream, $cerulean, 25%); // #71bdd3
-$lighter-cerulean: mix($cream, $cerulean, 50%); // #
-
-
-// TERTIARY / SCREEN
-$color-brand-zeta: #00784e;     // Green
-$color-brand-eta: #007197;      // Blue
-$color-brand-theta: #b32d9c;    // Purple
-$color-brand-iota: #ffd74e;     // Yellow
-
-$green: $color-brand-zeta;
-$blue: $color-brand-eta;
-$purple: $color-brand-theta;
-$yellow: $color-brand-iota;
-
-$light-green: #e7f1ea;
-$light-blue: #e7f0f0;
-$light-purple: #f7eaf1;
+$brand-alpha-shade-0100: darken($brand-alpha, 8%);    // #002570
+$brand-alpha-shade-0200: darken($brand-alpha, 12%);   // #001f5c
+$brand-alpha-shade-0300: darken($brand-alpha, 16%);   // #001847
 
 
 // NEUTRALS
 $white: #fff;
 $black: #000;
 
-$gray: mix($white, $black);           // #808080
+$gray: mix($white, $black);         // #808080
 
-$gray-light: lighten($gray, 27%);     // #c5c5c5
-$gray-lighter: lighten($gray, 36%);   // #dcdcdc
-$gray-lightest: lighten($gray, 47%);  // #f8f8f8
+$gray-0100: lighten($gray, 48%);    // #fafafa
+$gray-0200: lighten($gray, 42%);    // #ebebeb
+$gray-0300: lighten($gray, 36%);    // #dcdcdc
+$gray-0400: lighten($gray, 30%);    // #cdcdcd
+$gray-0500: $gray;                  // #808080
+$gray-0600: darken($gray, 20%);     // #525252
+$gray-0700: darken($gray, 24%);     // #434343
+$gray-0800: darken($gray, 28%);     // #393939
+$gray-0900: darken($gray, 32%);     // #2e2e2e
+$gray-1000: darken($gray, 36%);     // #242424
 
-$gray-dark: darken($gray, 10%);       // #676767
-$gray-darker: darken($gray, 24%);     // #434343
-$gray-darkest: darken($gray, 32%);    // #2e2e2e
+$gray-lightest: $gray-0100;
+$gray-lighter: $gray-0200;
+$gray-light: $gray-0300;
+
+$gray-dark: $gray-0700;
+$gray-darker: $gray-0800;
+$gray-darkest: $gray-0900;
+
 
 // Miscellaneous
-$color-highlight: #ff0;
-$color-required: #d00;
-$color-kbd: #0f0;
+$highlight: #ff0;
+$required: #900;
+$kbd: #0f0;
+
 
 // CONTEXTUAL COLORS
-$color-info: $blue;
-$color-success: $green;
-$color-warning: #d53f25;
-$color-danger: $scarlet-shade;
+$info: #039;
+$success: #060;
+$warning: #c30;
+$danger: #900;
 
 
 // SOCIAL MEDIA COLORS
-$color-facebook: #3b5998;             // Facebook
-$color-instagram: #c13584;            // Instagram
-$color-linkedin: #0077b5;             // LinkedIn
-$color-pinterest: #bd081c;            // Pinterest
-$color-snapchat: #fffc00;             // SnapChat
-$color-twitter: #1da1f2;              // Twitter
-$color-youtube: #cd201f;              // YouTube
+$facebook: #3b5998;     // Facebook
+$instagram: #c13584;    // Instagram
+$linkedin: #0077b5;     // LinkedIn
+$pinterest: #bd081c;    // Pinterest
+$snapchat: #fffc00;     // SnapChat
+$twitter: #1da1f2;      // Twitter
+$youtube: #cd201f;      // YouTube

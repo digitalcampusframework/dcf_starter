@@ -17,11 +17,3 @@
 .theme-br-alpha { @include br-alpha(!important); }  // Right
 .theme-bb-alpha { @include bb-alpha(!important); }  // Bottom
 .theme-bl-alpha { @include bl-alpha(!important); }  // Left
-
-
-// Brand: Beta
-.theme-b-beta { @include b-beta(!important); }      // All sides
-.theme-bt-beta { @include bt-beta(!important); }    // Top
-.theme-br-beta { @include br-beta(!important); }    // Right
-.theme-bb-beta { @include bb-beta(!important); }    // Bottom
-.theme-bl-beta { @include bl-beta(!important); }    // Left
