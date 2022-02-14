@@ -16,7 +16,6 @@
     sass            = require('gulp-sass'),
     sassGlob        = require('gulp-sass-glob'),
     autoprefixer    = require('autoprefixer'),
-    objectFitImages = require('postcss-object-fit-images'),
     postcss         = require('gulp-postcss'),
     sourcemaps      = require('gulp-sourcemaps'),
     babel = require('gulp-babel'),
@@ -48,8 +47,7 @@
     watch       : 'scss/{,*/}*.{scss,sass}',
     build       : 'css/',
     plugins:    [
-      autoprefixer(),
-      objectFitImages()
+      autoprefixer()
     ],
     sassOpts: {
       sourceMap       : true,
@@ -97,10 +95,6 @@
   function vendorJS(cb) {
     // copy body-scroll-lock
     gulp.src('node_modules/body-scroll-lock/lib/bodyScrollLock.min.js')
-      .pipe(gulp.dest('js/vendor/'));
-
-    // copy object-fit-images
-    gulp.src('node_modules/object-fit-images/dist/ofi.min.js')
       .pipe(gulp.dest('js/vendor/'));
 
     // copy requirejs
