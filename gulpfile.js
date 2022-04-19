@@ -68,7 +68,7 @@
   // Values must match file names in `node_modules/dcf/js`
   const jsModules = [
     'dcf-cardAsLink.js',
-    'dcf-bgVideoToggle.js',
+    'dcf-autoplayVideoToggle.js',
     'dcf-datepicker.js',
     'dcf-lazyLoad.js',
     'dcf-modal.js',
