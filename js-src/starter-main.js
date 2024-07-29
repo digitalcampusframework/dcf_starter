@@ -53,8 +53,8 @@ require(['js/dcf-lazyLoad'], function(DCFLazyLoadModule) {
     threshold: [0, 0.5]
   };
   const enterClassNames = [];
-  const unlLazyLoad = new DCFLazyLoadModule.DCFLazyLoad(images, observerConfig, enterClassNames);
-  unlLazyLoad.initialize();
+  const lazyLoad = new DCFLazyLoadModule.DCFLazyLoad(images, observerConfig, enterClassNames);
+  lazyLoad.initialize();
 });
 
 //Date Picker
