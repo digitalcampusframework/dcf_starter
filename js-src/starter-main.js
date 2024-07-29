@@ -1,8 +1,3 @@
-// Test for Object and apply if not supported
-if(!('objectFit' in document.body.style)) {
-  objectFitImages();
-}
-
 require(['js/dcf-utility'], function(DCFUtilityModule) {
   // WebP Support Example
   DCFUtilityModule.DCFUtility.flagSupportsWebP();
