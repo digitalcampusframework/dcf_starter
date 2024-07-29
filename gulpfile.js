@@ -1,13 +1,13 @@
 const { series, parallel, src, dest, watch } = require('gulp');
-const noop          = require('gulp-noop');
+const noop            = require('gulp-noop');
 const sass            = require('gulp-sass')(require('sass'));
 const sassGlob        = require('gulp-sass-glob');
 const postcss         = require('gulp-postcss');
-const autoprefixer = require('autoprefixer')
+const autoprefixer    = require('autoprefixer')
 const sourcemaps      = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
-const plumber = require('gulp-plumber');
-const uglify = require('gulp-uglify');
+const babel           = require('gulp-babel');
+const plumber         = require('gulp-plumber');
+const uglify          = require('gulp-uglify');
 
 const devBuild  = ((process.env.NODE_ENV || 'development').trim().toLowerCase() === 'development');
 
@@ -15,7 +15,7 @@ const cssConfig = {
     src         : 'scss/{,*/}*.{scss,sass}',
     watch       : 'scss/{,*/}*.{scss,sass}',
     build       : 'css/',
-    plugins     : [ 
+    plugins     : [
         autoprefixer()
     ],
     sassOpts: {
