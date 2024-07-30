@@ -1,8 +1,3 @@
-// Test for Object and apply if not supported
-if(!('objectFit' in document.body.style)) {
-  objectFitImages();
-}
-
 require(['js/dcf-utility'], function(DCFUtilityModule) {
   // WebP Support Example
   DCFUtilityModule.DCFUtility.flagSupportsWebP();
@@ -58,8 +53,8 @@ require(['js/dcf-lazyLoad'], function(DCFLazyLoadModule) {
     threshold: [0, 0.5]
   };
   const enterClassNames = [];
-  const unlLazyLoad = new DCFLazyLoadModule.DCFLazyLoad(images, observerConfig, enterClassNames);
-  unlLazyLoad.initialize();
+  const lazyLoad = new DCFLazyLoadModule.DCFLazyLoad(images, observerConfig, enterClassNames);
+  lazyLoad.initialize();
 });
 
 //Date Picker
@@ -85,6 +80,35 @@ require(['js/dcf-autoplayVideoToggle'], function(DCFAutoplayVideoToggleModule) {
   theme.setThemeVariable('togglePauseBtnInnerHTML', '<svg class="dcf-h-4 dcf-w-4 dcf-fill-current" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M10.5 0h-5C5.224 0 5 .224 5 .5v23C5 23.776 5.224 24 5.5 24h5c.276 0 .5-.224.5-.5v-23C11 .224 10.776 0 10.5 0zM18.5 0h-5C13.224 0 13 .224 13 .5v23c0 .276.224.5.5.5h5c.276 0 .5-.224.5-.5v-23C19 .224 18.776 0 18.5 0z"></path></svg>');
   let autoplayVideoToggle = new DCFAutoplayVideoToggleModule.DCFAutoplayVideoToggle(theme);
   autoplayVideoToggle.initialize();
+});
+
+// Figcaption Toggle
+require(['js/dcf-figcaption-toggle'], function(DCFFigcaptionToggleModule) {
+  // Get all the buttons and create the theme
+  const figcaptions = document.querySelectorAll('.dcf-figcaption-toggle');
+  const figcaptionToggleTheme = new DCFFigcaptionToggleModule.DCFFigcaptionToggleTheme();
+
+  figcaptionToggleTheme.setThemeVariable('toggleButtonInnerHTML',
+    `<svg class="dcf-h-4 dcf-w-4 dcf-fill-current"
+      width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path class="theme-btn-toggle-figcaption-icon-open"
+      d="M1,3h19c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1C0.4,1,0,1.4,0,2C0,2.6,0.4,3,1,3z"/>
+      '<path class="theme-btn-toggle-figcaption-icon-open"
+      d="M1,8h15c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1C0.4,6,0,6.4,0,7C0,7.6,0.4,8,1,8z"/>
+      <path class="theme-btn-toggle-figcaption-icon-close-1"
+      d="M1,13h22c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,12.6,0.4,13,1,13z"/>
+      <path class="theme-btn-toggle-figcaption-icon-close-2"
+      d="M1,13h22c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,12.6,0.4,13,1,13z"/>
+      <path class="theme-btn-toggle-figcaption-icon-open"
+      d="M1,18h18c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,17.6,0.4,18,1,18z"/>
+      <path class="theme-btn-toggle-figcaption-icon-open"
+      d="M1,23h15c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1C0,22.6,0.4,23,1,23z"/>
+    </svg>`
+  );
+
+  // Initialize the buttons with the theme
+  const figcaptionToggleObj = new DCFFigcaptionToggleModule.DCFFigcaptionToggle(figcaptions, figcaptionToggleTheme);
+  figcaptionToggleObj.initialize();
 });
 
 // Slideshow Example
