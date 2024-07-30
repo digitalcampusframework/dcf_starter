@@ -35,14 +35,21 @@ const jsConfig = {
 // List of DCF Modules to process comment out or remove unwanted modules
 // Values must match file names in `node_modules/dcf/js`
 const jsModules = [
-    'dcf-cardAsLink.js',
     'dcf-autoplayVideoToggle.js',
+    'dcf-button-toggle.js',
+    'dcf-cardAsLink.js',
+    'dcf-collapsible-fieldset.js',
     'dcf-datepicker.js',
+    'dcf-figcaption-toggle.js',
+    'dcf-gallery.js',
     'dcf-lazyLoad.js',
     'dcf-modal.js',
     'dcf-navMenuToggle.js',
     'dcf-notice.js',
     'dcf-pagination.js',
+    'dcf-popup.js',
+    'dcf-scrollAnimation.js',
+    'dcf-search-select.js',
     'dcf-slideshow.js',
     'dcf-table.js',
     'dcf-tabs.js',
